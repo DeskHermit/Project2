@@ -29,6 +29,7 @@
   "resources":[
     {"id":{"name":"rm_floor1","path":"rooms/rm_floor1/rm_floor1.yy",},},
     {"id":{"name":"rm_lift_scene","path":"rooms/rm_lift_scene/rm_lift_scene.yy",},},
+    {"id":{"name":"rm_outside","path":"rooms/rm_outside/rm_outside.yy",},},
     {"id":{"name":"spr_broken_wall","path":"sprites/spr_broken_wall/spr_broken_wall.yy",},},
     {"id":{"name":"spr_croc_3D","path":"sprites/spr_croc_3D/spr_croc_3D.yy",},},
     {"id":{"name":"spr_croc","path":"sprites/spr_croc/spr_croc.yy",},},
@@ -62,6 +63,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_floor1","path":"rooms/rm_floor1/rm_floor1.yy",},},
     {"roomId":{"name":"rm_lift_scene","path":"rooms/rm_lift_scene/rm_lift_scene.yy",},},
+    {"roomId":{"name":"rm_outside","path":"rooms/rm_outside/rm_outside.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
