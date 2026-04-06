@@ -27,6 +27,10 @@
   },
   "name":"Project2",
   "resources":[
+    {"id":{"name":"Object1","path":"objects/Object1/Object1.yy",},},
+    {"id":{"name":"Object2","path":"objects/Object2/Object2.yy",},},
+    {"id":{"name":"Object3","path":"objects/Object3/Object3.yy",},},
+    {"id":{"name":"Object4","path":"objects/Object4/Object4.yy",},},
     {"id":{"name":"rm_floor1","path":"rooms/rm_floor1/rm_floor1.yy",},},
     {"id":{"name":"rm_lift_scene","path":"rooms/rm_lift_scene/rm_lift_scene.yy",},},
     {"id":{"name":"rm_outside","path":"rooms/rm_outside/rm_outside.yy",},},
