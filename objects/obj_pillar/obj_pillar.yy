@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"Object3",
+  "%Name":"obj_pillar",
   "eventList":[],
   "managed":true,
-  "name":"Object3",
+  "name":"obj_pillar",
   "overriddenProperties":[],
   "parent":{
-    "name":"sprites 2D",
-    "path":"folders/sprites/sprites 2D.yy",
+    "name":"objects 2D",
+    "path":"folders/Objects/objects 2D.yy",
   },
   "parentObjectId":null,
   "persistent":false,
