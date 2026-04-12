@@ -6,8 +6,8 @@
   "name":"obj_fuse_3D",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects 2D",
-    "path":"folders/Objects/objects 2D.yy",
+    "name":"objects 3D",
+    "path":"folders/Objects/objects 3D.yy",
   },
   "parentObjectId":null,
   "persistent":false,

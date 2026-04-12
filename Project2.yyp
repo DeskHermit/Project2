@@ -11,8 +11,8 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"objects 3D","folderPath":"folders/Objects/objects 3D.yy","name":"objects 3D","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects 2D","folderPath":"folders/Objects/objects 2D.yy","name":"objects 2D","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"objects 3D","folderPath":"folders/Objects/objects 3D.yy","name":"objects 3D","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"rooms","folderPath":"folders/rooms.yy","name":"rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sprites","folderPath":"folders/sprites.yy","name":"sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sprites 2D","folderPath":"folders/sprites/sprites 2D.yy","name":"sprites 2D","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -27,7 +27,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.213",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"Project2",
   "resources":[
@@ -39,6 +39,7 @@
     {"id":{"name":"rm_lift_scene","path":"rooms/rm_lift_scene/rm_lift_scene.yy",},},
     {"id":{"name":"rm_table","path":"rooms/rm_table/rm_table.yy",},},
     {"id":{"name":"rm_title_screen","path":"rooms/rm_title_screen/rm_title_screen.yy",},},
+    {"id":{"name":"spr_bat","path":"sprites/spr_bat/spr_bat.yy",},},
     {"id":{"name":"spr_blocker","path":"sprites/spr_blocker/spr_blocker.yy",},},
     {"id":{"name":"spr_broken_wall","path":"sprites/spr_broken_wall/spr_broken_wall.yy",},},
     {"id":{"name":"spr_croc_3D","path":"sprites/spr_croc_3D/spr_croc_3D.yy",},},
@@ -46,6 +47,7 @@
     {"id":{"name":"spr_cuboard_3D","path":"sprites/spr_cuboard_3D/spr_cuboard_3D.yy",},},
     {"id":{"name":"spr_cuboard","path":"sprites/spr_cuboard/spr_cuboard.yy",},},
     {"id":{"name":"spr_door_animation","path":"sprites/spr_door_animation/spr_door_animation.yy",},},
+    {"id":{"name":"spr_door_breaker","path":"sprites/spr_door_breaker/spr_door_breaker.yy",},},
     {"id":{"name":"spr_door","path":"sprites/spr_door/spr_door.yy",},},
     {"id":{"name":"spr_flashlight_3D","path":"sprites/spr_flashlight_3D/spr_flashlight_3D.yy",},},
     {"id":{"name":"spr_floor0","path":"sprites/spr_floor0/spr_floor0.yy",},},
@@ -62,6 +64,7 @@
     {"id":{"name":"spr_lift","path":"sprites/spr_lift/spr_lift.yy",},},
     {"id":{"name":"spr_mute","path":"sprites/spr_mute/spr_mute.yy",},},
     {"id":{"name":"spr_normal_tiles","path":"sprites/spr_normal_tiles/spr_normal_tiles.yy",},},
+    {"id":{"name":"spr_outside_wall","path":"sprites/spr_outside_wall/spr_outside_wall.yy",},},
     {"id":{"name":"spr_outside","path":"sprites/spr_outside/spr_outside.yy",},},
     {"id":{"name":"spr_path_tiles","path":"sprites/spr_path_tiles/spr_path_tiles.yy",},},
     {"id":{"name":"spr_pause","path":"sprites/spr_pause/spr_pause.yy",},},
