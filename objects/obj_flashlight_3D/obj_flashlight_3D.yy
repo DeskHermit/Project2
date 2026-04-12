@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fuse_3D",
-  "eventList":[],
-  "managed":true,
-  "name":"obj_fuse_3D",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_key_3D","path":"objects/obj_key_3D/obj_key_3D.yy",},"propertyId":{"name":"obj_name","path":"objects/obj_key_3D/obj_key_3D.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"fuse",},
+  "%Name":"obj_flashlight_3D",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
+  "managed":true,
+  "name":"obj_flashlight_3D",
+  "overriddenProperties":[],
   "parent":{
     "name":"objects 3D",
     "path":"folders/Objects/objects 3D.yy",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fuse_3D",
-    "path":"sprites/spr_fuse_3D/spr_fuse_3D.yy",
+    "name":"spr_flashlight_3D",
+    "path":"sprites/spr_flashlight_3D/spr_flashlight_3D.yy",
   },
   "spriteMaskId":null,
   "visible":true,
