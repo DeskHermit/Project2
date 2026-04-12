@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"objects 3D",
-    "path":"folders/Objects/objects 3D.yy",
+    "path":"folders/objects/objects 3D.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"objects handlers",
-    "path":"folders/Objects/objects handlers.yy",
+    "path":"folders/objects/objects handlers.yy",
   },
   "parentObjectId":null,
   "persistent":true,
