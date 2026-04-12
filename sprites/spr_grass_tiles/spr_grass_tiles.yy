@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"texturegroup1",
+    "path":"texturegroups/texturegroup1",
   },
   "type":0,
   "VTile":false,

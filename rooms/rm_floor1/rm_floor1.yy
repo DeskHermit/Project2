@@ -5,7 +5,11 @@
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
-  "instanceCreationOrder":[],
+  "instanceCreationOrder":[
+    {"name":"inst_23126A88","path":"rooms/rm_floor1/rm_floor1.yy",},
+    {"name":"inst_8E37287","path":"rooms/rm_floor1/rm_floor1.yy",},
+    {"name":"inst_6BFC4AF6","path":"rooms/rm_floor1/rm_floor1.yy",},
+  ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances_1","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
