@@ -25,3 +25,23 @@ if (xspd != 0 or yspd != 0) {
 
 move_and_collide(xspd,yspd,[obj_collision]);
 
+// Toggle flashlight
+if (keyboard_check_pressed(ord("F")) && global.inventory.torch) {
+    flashlight_on = !flashlight_on;
+}
+
+// Flashlight toggle cheat (Shift + F)
+if (keyboard_check_pressed(ord("F")) 
+    && keyboard_check(vk_shift)) 
+{
+    flashlight_on = !flashlight_on;
+}
+
+// Battery drain
+if (flashlight_on) {
+    battery -= 0.05;
+    if (battery <= 0) {
+        battery = 0;
+        flashlight_on = false;
+    }
+}
