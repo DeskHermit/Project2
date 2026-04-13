@@ -1,1 +1,1 @@
-global.inventory = { items: [], torch: false }
+global.inventory = { items: [], torch: false, staff: false }

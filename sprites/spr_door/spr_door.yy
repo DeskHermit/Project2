@@ -2,8 +2,8 @@
   "$GMSprite":"v2",
   "%Name":"spr_door",
   "bboxMode":0,
-  "bbox_bottom":303,
-  "bbox_left":115,
+  "bbox_bottom":292,
+  "bbox_left":119,
   "bbox_right":366,
   "bbox_top":246,
   "collisionKind":1,
@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"aab701ac-b320-45d0-a1f1-05a3c88b040f","name":"aab701ac-b320-45d0-a1f1-05a3c88b040f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"04b0c339-b030-412a-a4b4-cd5e5b84acf6","name":"04b0c339-b030-412a-a4b4-cd5e5b84acf6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"27968815-53a8-4d43-8254-c88d68b11c16","name":"27968815-53a8-4d43-8254-c88d68b11c16","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"29a5ed18-a1e5-4c27-b74d-bb44eb430f99","name":"29a5ed18-a1e5-4c27-b74d-bb44eb430f99","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"77a3b02e-4870-459f-bff0-9f06473bab64","name":"77a3b02e-4870-459f-bff0-9f06473bab64","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"3ed89572-783e-4337-a445-5dbf3087a7c0","name":"3ed89572-783e-4337-a445-5dbf3087a7c0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
@@ -25,7 +25,26 @@
     {"$GMImageLayer":"","%Name":"ca634d3e-97a4-4ef4-a008-3013338c3c7b","blendMode":0,"displayName":"default","isLocked":false,"name":"ca634d3e-97a4-4ef4-a008-3013338c3c7b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_door",
-  "nineSlice":null,
+  "nineSlice":{
+    "$GMNineSliceData":"",
+    "bottom":0,
+    "enabled":false,
+    "guideColour":[4294902015,4294902015,4294902015,4294902015,],
+    "highlightColour":1728023040,
+    "highlightStyle":0,
+    "left":0,
+    "resourceType":"GMNineSliceData",
+    "resourceVersion":"2.0",
+    "right":0,
+    "tileMode":[
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "top":0,
+  },
   "origin":4,
   "parent":{
     "name":"sprites 2D",
@@ -72,11 +91,11 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"aab701ac-b320-45d0-a1f1-05a3c88b040f","path":"sprites/spr_door/spr_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4763a70c-cbab-4e17-9276-d41667737ea0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"27968815-53a8-4d43-8254-c88d68b11c16","path":"sprites/spr_door/spr_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d0d8a2ea-ccd9-4210-b03c-1f7f37d05497","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"04b0c339-b030-412a-a4b4-cd5e5b84acf6","path":"sprites/spr_door/spr_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"42557687-5833-41e5-9a7d-530732cd5801","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"29a5ed18-a1e5-4c27-b74d-bb44eb430f99","path":"sprites/spr_door/spr_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8d77d30a-ea8f-4a5e-a537-2f389f5c9ecb","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"77a3b02e-4870-459f-bff0-9f06473bab64","path":"sprites/spr_door/spr_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4ffcdbf7-2934-486e-9f31-4ca1d5c93caf","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
