@@ -4,12 +4,17 @@
   "eventList":[],
   "managed":true,
   "name":"obj_fuse_3D",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_key_3D","path":"objects/obj_key_3D/obj_key_3D.yy",},"propertyId":{"name":"obj_name","path":"objects/obj_key_3D/obj_key_3D.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"fuse",},
+  ],
   "parent":{
     "name":"objects 3D",
-    "path":"folders/Objects/objects 3D.yy",
+    "path":"folders/objects/objects 3D.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_key_3D",
+    "path":"objects/obj_key_3D/obj_key_3D.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,0 +1,1 @@
+global.inventory = { items: [], torch: false, staff: false }

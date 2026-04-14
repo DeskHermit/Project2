@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"objects 2D",
-    "path":"folders/Objects/objects 2D.yy",
+    "path":"folders/objects/objects 2D.yy",
   },
   "parentObjectId":null,
   "persistent":false,
