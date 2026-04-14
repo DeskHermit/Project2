@@ -45,6 +45,7 @@
     {"id":{"name":"obj_flashlight_3D","path":"objects/obj_flashlight_3D/obj_flashlight_3D.yy",},},
     {"id":{"name":"obj_fuse_3D","path":"objects/obj_fuse_3D/obj_fuse_3D.yy",},},
     {"id":{"name":"obj_key_3D","path":"objects/obj_key_3D/obj_key_3D.yy",},},
+    {"id":{"name":"obj_light_controller","path":"objects/obj_light_controller/obj_light_controller.yy",},},
     {"id":{"name":"obj_outside_wall","path":"objects/obj_outside_wall/obj_outside_wall.yy",},},
     {"id":{"name":"obj_permanent","path":"objects/obj_permanent/obj_permanent.yy",},},
     {"id":{"name":"obj_pillar","path":"objects/obj_pillar/obj_pillar.yy",},},

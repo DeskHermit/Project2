@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_post",
+  "%Name":"obj_light_controller",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_post",
+  "name":"obj_light_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects 2D",
-    "path":"folders/objects/objects 2D.yy",
+    "name":"objects handlers",
+    "path":"folders/objects/objects handlers.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_post",
-    "path":"sprites/spr_post/spr_post.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
