@@ -1,0 +1,24 @@
+{
+  "$GMPath":"",
+  "%Name":"Path1",
+  "closed":false,
+  "kind":0,
+  "name":"Path1",
+  "parent":{
+    "name":"Project2",
+    "path":"Project2.yyp",
+  },
+  "points":[
+    {"speed":100.0,"x":-96.0,"y":832.0,},
+    {"speed":100.0,"x":128.0,"y":832.0,},
+    {"speed":100.0,"x":736.0,"y":864.0,},
+    {"speed":100.0,"x":800.0,"y":576.0,},
+    {"speed":100.0,"x":416.0,"y":320.0,},
+    {"speed":100.0,"x":256.0,"y":96.0,},
+    {"speed":100.0,"x":-96.0,"y":96.0,},
+    {"speed":100.0,"x":-96.0,"y":832.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

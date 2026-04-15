@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_back",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_bat",
+  "eventList":[],
   "managed":true,
-  "name":"obj_back",
+  "name":"obj_bat",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects buttons",
-    "path":"folders/objects/objects buttons.yy",
+    "name":"objects 2D",
+    "path":"folders/objects/objects 2D.yy",
   },
-  "parentObjectId":{
-    "name":"obj_start",
-    "path":"objects/obj_start/obj_start.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_back",
-    "path":"sprites/spr_back/spr_back.yy",
+    "name":"spr_bat",
+    "path":"sprites/spr_bat/spr_bat.yy",
   },
   "spriteMaskId":null,
   "visible":true,
