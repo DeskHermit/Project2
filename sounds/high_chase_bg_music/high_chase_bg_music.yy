@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"high_chase_bg_music",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":32.975986,
+  "exportDir":"",
+  "name":"high_chase_bg_music",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"high_chase_bg_music.mp3",
+  "volume":1.0,
+}

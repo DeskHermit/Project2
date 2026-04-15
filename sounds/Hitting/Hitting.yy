@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"Sound1",
+  "%Name":"Hitting",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.0440136,
   "exportDir":"",
-  "name":"Sound1",
+  "name":"Hitting",
   "parent":{
-    "name":"sounds",
-    "path":"folders/sounds.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"",
+  "soundFile":"Hitting.mp3",
   "volume":1.0,
 }
