@@ -35,7 +35,7 @@ if (keyboard_check_pressed(ord("F"))
     && keyboard_check(vk_shift)) 
 {
     flashlight_on = !flashlight_on;
-}
+} 
 
 // Battery drain
 if (flashlight_on) {
