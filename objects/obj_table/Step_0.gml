@@ -5,3 +5,9 @@ if (_contact) {
 } else {
     image_index = 0
 }
+
+if (keyboard_check_pressed(ord("E")) && _contact)
+{
+	global.last_room = room; // Store current room ID
+	room_goto(rm_outside_table)
+}

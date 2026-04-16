@@ -3,3 +3,5 @@ global.inventory = {
     torch: false, 
     staff: false 
 };
+
+global.last_room = -1

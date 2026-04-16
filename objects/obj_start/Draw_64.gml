@@ -1,0 +1,1 @@
+if (pause) {draw_self()}

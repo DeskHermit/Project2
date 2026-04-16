@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_post",
-    "path":"sprites/spr_post/spr_post.yy",
+    "name":"spr_post_free",
+    "path":"sprites/spr_post_free/spr_post_free.yy",
   },
   "spriteMaskId":null,
   "visible":true,
