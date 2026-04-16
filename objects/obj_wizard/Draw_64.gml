@@ -25,13 +25,23 @@ for (var inv = 0; inv < maxInvSlots; inv++) {
  
     if (item != noone) {
         
-        var spr = item.sprite_index;
+        var spr = object_get_sprite(item);
+		
+		var box_w = slot_w;
+        var box_h = slot_h;
+		
+		var spr_w = sprite_get_width(spr);
+        var spr_h = sprite_get_height(spr);
+		
+		var scale = min(box_w / spr_w, box_h / spr_h) * 0.8;
 
  
-        var drawX = itemX + (slot_w / 2) - (sprite_get_width(spr) / 2);
-        var drawY = itemY + (slot_h / 2) - (sprite_get_height(spr) / 2);
+        
+        var drawX = itemX + (slot_w / 2);
+        var drawY = itemY + (slot_h / 2);
 
-        draw_sprite(spr, 0, drawX, drawY);
+       draw_sprite_ext(spr, 0, drawX, drawY, scale, scale, 0, c_white, 1);
+	   
     }
 }
 

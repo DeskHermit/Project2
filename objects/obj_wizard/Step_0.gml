@@ -48,3 +48,29 @@ if (flashlight_on) {
 
 x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
+
+
+if (mouse_check_button_pressed(mb_left)) {
+    
+    var mx = device_mouse_x(0);
+    var my = device_mouse_y(0);
+    
+    var clickedItem = instance_position(mx, my, obj_item_parent);
+    
+    if (clickedItem != noone) {
+        
+        for (var i = 0; i < array_length(global.inventory.items); i++) {
+            
+            if (global.inventory.items[i] == noone) {
+                
+               global.inventory.items[i] = clickedItem.object_index;
+			   if (clickedItem.object_index == obj_torch) {
+                     global.inventory.torch = true;
+               }
+			   
+               instance_destroy(clickedItem);
+                break;
+            }
+        }
+    }
+}
