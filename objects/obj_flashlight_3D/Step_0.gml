@@ -9,7 +9,7 @@ if (_hover) {
         global.inventory.torch = true;
         
         scr_textbox("Press F to toggle Flashlight", c_lime, , , 50, 300);
-        scr_textbox("You can collect battery and use them to continue fill charge.", c_lime, , , 80, 300);
+        scr_textbox("You can collect battery and use them to continue fill charge.", c_lime, , , 100, 300);
         
         instance_destroy();
     }
