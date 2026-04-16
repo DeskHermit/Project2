@@ -50,15 +50,21 @@ if (p != noone) {
     draw_circle_color(px, py, 60, c_white, c_white, false);
 }
 
-/* Post Lights
+
+// Draw all post lights
 with (obj_post) {
     var px = x - cam_x;
     var py = y - cam_y;
-
-    draw_ellipse_color(px - 80, py - 50, px + 80, py + 50,
-        c_white, c_white, false);
+    var mat_box = matrix_get(matrix_world);
+ 
+    var mat_new = matrix_build(px, py, 0, 0, 0, light_angle, 1, 1, 1);
+    matrix_set(matrix_world, mat_new);
+	draw_set_alpha(light_alpha);
+    draw_ellipse_color(-light_width, -light_height, light_width, light_height, light_color, c_black, false);
+    draw_set_alpha(1);
+    matrix_set(matrix_world, mat_box);
 }
-*/
+
 gpu_set_blendmode(bm_normal);
 surface_reset_target();
 draw_surface(light_surface, cam_x, cam_y);

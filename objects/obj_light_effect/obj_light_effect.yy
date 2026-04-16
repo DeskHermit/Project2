@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_post",
+  "%Name":"obj_light_effect",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_post",
+  "name":"obj_light_effect",
   "overriddenProperties":[],
   "parent":{
     "name":"objects 2D",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_post_free",
-    "path":"sprites/spr_post_free/spr_post_free.yy",
+    "name":"spr_collision",
+    "path":"sprites/spr_collision/spr_collision.yy",
   },
   "spriteMaskId":null,
   "visible":true,
