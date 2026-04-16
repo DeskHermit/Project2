@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_croc_tutorial",
+  "%Name":"obj_bat_tutorial",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_croc_tutorial",
+  "name":"obj_bat_tutorial",
   "overriddenProperties":[],
   "parent":{
     "name":"objects 2D",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_croc",
-    "path":"sprites/spr_croc/spr_croc.yy",
+    "name":"spr_bat",
+    "path":"sprites/spr_bat/spr_bat.yy",
   },
   "spriteMaskId":null,
   "visible":true,
