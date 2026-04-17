@@ -6,8 +6,9 @@ switch (room) {
 		}
 		break
 	case rm_tutorial:
-		if (global.first_time) {
+		if (global.first_time && _tutorial) {
 			scr_textbox("You can also press the First letter of buttons to press them", c_white,,,50,300)
+			_tutorial = !_tutorial
 		}
 		break
 	case rm_first_playable_end:
