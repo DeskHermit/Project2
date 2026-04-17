@@ -49,7 +49,9 @@ if (state != "opening" && state != "closing" && box_scale > 0.8) {
 
         // Ancient Rune
         if (_prog < 1.0) {
-            draw_set_font(font_unreadable)
+			if (scramble) {
+				draw_set_font(font_unreadable)
+			}
             draw_set_alpha((1.0 - _prog) * _base_alpha)
             draw_set_color(color)
             draw_text(_text_x_start + _cursor_x, _draw_y + _line_y_offset, _char)

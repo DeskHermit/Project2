@@ -40,6 +40,9 @@ if (keyboard_check_pressed(ord("F"))
 // Battery drain
 if (flashlight_on) {
     battery -= 0.05;
+	if (battery<10) {
+		scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false)
+	}
     if (battery <= 0) {
         battery = 0;
         flashlight_on = false;

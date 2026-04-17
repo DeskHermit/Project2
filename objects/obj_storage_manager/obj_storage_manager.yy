@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_door",
+  "%Name":"obj_storage_manager",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_door",
+  "name":"obj_storage_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects 2D",
-    "path":"folders/objects/objects 2D.yy",
+    "name":"objects handlers",
+    "path":"folders/objects/objects handlers.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,11 +29,8 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
-  "spriteId":{
-    "name":"spr_door",
-    "path":"sprites/spr_door/spr_door.yy",
-  },
+  "solid":false,
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

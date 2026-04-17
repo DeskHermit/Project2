@@ -10,7 +10,7 @@ switch (state) {
         box_scale = lerp(box_scale, 1, anim_speed)
         if (box_scale > 0.99) {
             box_scale = 1
-            state = "translating"
+			state = "translating"
         }
     break
 

@@ -15,4 +15,6 @@ switch (room) {
 			scr_textbox("TO BE CONTINUTED", c_white,,,300,300)
 		}
 		break
+	case rm_outside_table:
+		_store = instance_create_layer(0,0,layer,obj_storage_manager)
 }
