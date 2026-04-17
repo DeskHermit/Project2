@@ -7,6 +7,7 @@ global.inventory = {
 global.last_room = -1
 
 global.first_time = true
+_tutorial = true
 
 global.store_id = noone
 
