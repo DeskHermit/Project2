@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"sprites_buttons",
-    "path":"folders/sprites/sprites_buttons.yy",
+    "name":"sprites_UI",
+    "path":"folders/sprites/sprites_UI.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

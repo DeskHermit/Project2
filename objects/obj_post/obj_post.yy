@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_post",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_post",
   "overriddenProperties":[],
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_post",
-    "path":"sprites/spr_post/spr_post.yy",
+    "name":"spr_post_free",
+    "path":"sprites/spr_post_free/spr_post_free.yy",
   },
   "spriteMaskId":null,
   "visible":true,

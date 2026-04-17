@@ -3,6 +3,8 @@ moveLeft = keyboard_check(vk_left) or keyboard_check(ord("A"))
 moveUp = keyboard_check(vk_up) or keyboard_check(ord("W"))
 moveDown = keyboard_check(vk_down) or keyboard_check(ord("S"))
 
+audio_listener_position(x, y, 0);
+
 if (global.inventory.torch){
 	sprite_index = _characters[1]
 } else if (global.inventory.staff) {
@@ -25,3 +27,55 @@ if (xspd != 0 or yspd != 0) {
 
 move_and_collide(xspd,yspd,[obj_collision]);
 
+// Toggle flashlight
+if (keyboard_check_pressed(ord("F")) && global.inventory.torch) {
+    flashlight_on = !flashlight_on;
+}
+
+// Flashlight toggle cheat (Shift + F)
+if (keyboard_check_pressed(ord("F")) 
+    && keyboard_check(vk_shift)) 
+{
+    flashlight_on = !flashlight_on;
+} 
+
+// Battery drain
+if (flashlight_on) {
+    battery -= 0.05;
+	if (battery<10) {
+		scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false)
+	}
+    if (battery <= 0) {
+        battery = 0;
+        flashlight_on = false;
+    }
+}
+
+x = clamp(x, 0, room_width);
+y = clamp(y, 0, room_height);
+
+
+if (mouse_check_button_pressed(mb_left)) {
+    
+    var mx = device_mouse_x(0);
+    var my = device_mouse_y(0);
+    
+    var clickedItem = instance_position(mx, my, obj_item_parent);
+    
+    if (clickedItem != noone) {
+        
+        for (var i = 0; i < array_length(global.inventory.items); i++) {
+            
+            if (global.inventory.items[i] == noone) {
+                
+               global.inventory.items[i] = clickedItem.object_index;
+			   if (clickedItem.object_index == obj_torch) {
+                     global.inventory.torch = true;
+               }
+			   
+               instance_destroy(clickedItem);
+                break;
+            }
+        }
+    }
+}

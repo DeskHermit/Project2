@@ -12,8 +12,8 @@
     "path":"folders/objects/objects 3D.yy",
   },
   "parentObjectId":{
-    "name":"obj_key_3D",
-    "path":"objects/obj_key_3D/obj_key_3D.yy",
+    "name":"obj_item_parent",
+    "path":"objects/obj_item_parent/obj_item_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
