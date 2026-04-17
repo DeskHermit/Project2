@@ -1,3 +1,8 @@
+var _no_rooms = [
+    rm_end_negative_screen,
+    rm_end_positive_screen
+];
+
 if (!array_contains(_no_rooms, room)) {
     #region INVENTORY DRAW
 
