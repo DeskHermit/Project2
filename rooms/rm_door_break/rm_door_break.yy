@@ -18,8 +18,8 @@
   ],
   "name":"rm_door_break",
   "parent":{
-    "name":"rooms",
-    "path":"folders/rooms.yy",
+    "name":"room cutscene",
+    "path":"folders/rooms/room cutscene.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

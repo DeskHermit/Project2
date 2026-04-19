@@ -13,7 +13,7 @@ if fade {
 	if (alpha >= 0.9) {
 		alpha = 1
 		if (_room==-1){
-			scr_save_game()
+			//scr_save_game()
 			game_end()
 		}
 		if room_exists(_room) {

@@ -18,4 +18,6 @@ switch (room) {
 		break
 	case rm_outside_table:
 		_store = instance_create_layer(0,0,layer,obj_storage_manager)
+	case rm_notes:
+		scr_note(global.heading, global.content)
 }

@@ -13,8 +13,8 @@
   ],
   "name":"rm_lift_scene",
   "parent":{
-    "name":"rooms",
-    "path":"folders/rooms.yy",
+    "name":"room cutscene",
+    "path":"folders/rooms/room cutscene.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

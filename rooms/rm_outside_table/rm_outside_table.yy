@@ -28,8 +28,8 @@
   ],
   "name":"rm_outside_table",
   "parent":{
-    "name":"rooms",
-    "path":"folders/rooms.yy",
+    "name":"room storage",
+    "path":"folders/rooms/room storage.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

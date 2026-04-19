@@ -6,8 +6,8 @@
   "name":"obj_black",
   "overriddenProperties":[],
   "parent":{
-    "name":"object other",
-    "path":"folders/objects/object other.yy",
+    "name":"objects bgs",
+    "path":"folders/objects/objects bgs.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_heading",
+  "%Name":"fnt_textbox",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":14,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":18,
   "maintainGms1Font":false,
-  "name":"fnt_heading",
+  "name":"fnt_textbox",
   "parent":{
     "name":"fonts",
     "path":"folders/fonts.yy",

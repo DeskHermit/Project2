@@ -5,8 +5,8 @@
   "managed":true,
   "name":"obj_quit",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"propertyId":{"name":"b_key","path":"objects/obj_start/obj_start.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Q",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"propertyId":{"name":"b_room","path":"objects/obj_start/obj_start.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"propertyId":{"name":"b_key","path":"objects/obj_start/obj_start.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Q",},
   ],
   "parent":{
     "name":"objects UI",

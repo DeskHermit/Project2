@@ -10,8 +10,8 @@
   "name":"obj_start",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects 2D",
-    "path":"folders/objects/objects 2D.yy",
+    "name":"objects UI",
+    "path":"folders/objects/objects UI.yy",
   },
   "parentObjectId":null,
   "persistent":false,
