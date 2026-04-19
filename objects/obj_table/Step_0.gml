@@ -8,8 +8,7 @@ if (_contact) {
 
 if (keyboard_check_pressed(ord("E")) && _contact)
 {
-	global.last_room = room;
 	global.store_id = table_key
-    show_debug_message("Interacting with: " + global.store_id)
+	show_debug_message(table_key)
 	room_goto(rm_outside_table)
 }

@@ -17,8 +17,12 @@ switch (room) {
 			scr_textbox("TO BE CONTINUTED", c_white,,,300,300)
 		}
 		break
-	case rm_outside_table:
-		_store = instance_create_layer(0,0,layer,obj_storage_manager)
 	case rm_notes:
 		scr_note(global.heading, global.content)
+}
+
+if (!array_contains(no_rooms,room) && !array_contains(table_rooms,room)) {
+	_wiz = instance_find(obj_wizard,0)
+	_wiz.x=wiz_x
+	_wiz.y=wiz_y
 }
