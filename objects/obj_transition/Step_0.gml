@@ -9,6 +9,9 @@ if fade {
 		}
 		instance_destroy()
 	}
+	if (_room=-4) {
+		 room_goto(global.last_room)
+	}
 	alpha+=_speed
 	if (alpha >= 0.9) {
 		alpha = 1
