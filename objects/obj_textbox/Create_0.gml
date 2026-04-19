@@ -1,6 +1,7 @@
 text = ""
 char_progress = []
 scramble = true
+space = false
 
 translation_speed = 0.12 
 

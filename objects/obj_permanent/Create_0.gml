@@ -16,5 +16,7 @@ global.storage = {
 	outsidetable2 : [obj_battery_3D,obj_notes_3D,obj_hammer_3D],
 }
 
+global.reset_to_start = true
+
 global.heading = "Instructions"
 global.content = ["Press wsad or arrow keys to control the character","Press F to toggle flashlight after obtaining flashlight"]
