@@ -13,8 +13,8 @@
   "out_tilehborder":0,
   "out_tilevborder":0,
   "parent":{
-    "name":"Project2",
-    "path":"Project2.yyp",
+    "name":"others",
+    "path":"folders/others.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

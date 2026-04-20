@@ -5,8 +5,8 @@
   "kind":0,
   "name":"Path1",
   "parent":{
-    "name":"Project2",
-    "path":"Project2.yyp",
+    "name":"others",
+    "path":"folders/others.yy",
   },
   "points":[
     {"speed":100.0,"x":-96.0,"y":832.0,},
