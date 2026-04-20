@@ -5,12 +5,12 @@
   "managed":true,
   "name":"obj_resume",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"propertyId":{"name":"b_room","path":"objects/obj_start/obj_start.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-3",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"propertyId":{"name":"b_key","path":"objects/obj_start/obj_start.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"R",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"propertyId":{"name":"b_room","path":"objects/obj_start/obj_start.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-3",},
   ],
   "parent":{
-    "name":"objects_sprites",
-    "path":"folders/objects/objects_sprites.yy",
+    "name":"objects UI",
+    "path":"folders/objects/objects UI.yy",
   },
   "parentObjectId":{
     "name":"obj_start",

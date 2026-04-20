@@ -1,3 +1,16 @@
+display_set_gui_size(1920, 1080);
+
+if (!array_contains(no_rooms, room) || room == rm_notes) {
+    var _tx = 1800;
+    var _ty = 40;
+    
+    if (!instance_exists(obj_pause_sml)) {
+        _ins = instance_create_depth(_tx, _ty, -10000, obj_pause_sml)
+		_ins.image_xscale = 0.2
+        _ins.image_yscale = 0.2
+    }
+}
+
 if (!array_contains(no_rooms, room)) {
     #region INVENTORY DRAW (Compact Version)
 

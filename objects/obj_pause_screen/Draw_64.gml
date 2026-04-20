@@ -1,16 +1,21 @@
 if (is_paused) {
-    // Draw the frozen game screen
+    // 1. Draw the frozen game
     if (surface_exists(pause_surf)) {
         draw_surface(pause_surf, 0, 0);
     }
     
-    // Draw a semi-transparent black overlay to dim the background
-    draw_set_alpha(0.7);
+    // 2. Dim the background (Increased to 0.75 for a DARKER look)
+    draw_set_alpha(0.75); 
     draw_set_color(c_black);
     draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
-    draw_set_alpha(1);
     
-    // Draw your Pause Title
+    // 3. RESET ALPHA IMMEDIATELY
+    // This stops the panel and buttons from being transparent
+    draw_set_alpha(1.0);
+    draw_set_color(c_white);
+    
+    // 4. Draw Pause Text
     draw_set_halign(fa_center);
-    draw_text(display_get_gui_width() / 2, 100, "PAUSED");
+    draw_set_valign(fa_middle);
+    draw_text_transformed(display_get_gui_width() / 2, 150, "PAUSED", 2, 2, 0);
 }

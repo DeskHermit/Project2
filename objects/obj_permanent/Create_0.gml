@@ -14,7 +14,7 @@ if (instance_exists(_wiz)){
 	wiz_x=_wiz.x
 	wiz_y=_wiz.y
 } else {
-	wiz_x=1856
+	wiz_x=1632
 	wiz_y=832
 }
 maxInvSlots = 5
