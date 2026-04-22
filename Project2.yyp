@@ -11,7 +11,6 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"fonts","folderPath":"folders/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"others","folderPath":"folders/others.yy","name":"others","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects 2D","folderPath":"folders/objects/objects 2D.yy","name":"objects 2D","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects 3D","folderPath":"folders/objects/objects 3D.yy","name":"objects 3D","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -19,6 +18,7 @@
     {"$GMFolder":"","%Name":"objects bgs","folderPath":"folders/objects/objects bgs.yy","name":"objects bgs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects handlers","folderPath":"folders/objects/objects handlers.yy","name":"objects handlers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects UI","folderPath":"folders/objects/objects UI.yy","name":"objects UI","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"others","folderPath":"folders/others.yy","name":"others","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"rooms","folderPath":"folders/rooms.yy","name":"rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"room cutscene","folderPath":"folders/rooms/room cutscene.yy","name":"room cutscene","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"room storage","folderPath":"folders/rooms/room storage.yy","name":"room storage","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -99,6 +99,7 @@
     {"id":{"name":"rm_end_positive_screen","path":"rooms/rm_end_positive_screen/rm_end_positive_screen.yy",},},
     {"id":{"name":"rm_first_playable_end","path":"rooms/rm_first_playable_end/rm_first_playable_end.yy",},},
     {"id":{"name":"rm_floor1","path":"rooms/rm_floor1/rm_floor1.yy",},},
+    {"id":{"name":"rm_floor2","path":"rooms/rm_floor2/rm_floor2.yy",},},
     {"id":{"name":"rm_lift_scene","path":"rooms/rm_lift_scene/rm_lift_scene.yy",},},
     {"id":{"name":"rm_notes","path":"rooms/rm_notes/rm_notes.yy",},},
     {"id":{"name":"rm_outside_table","path":"rooms/rm_outside_table/rm_outside_table.yy",},},
@@ -206,6 +207,7 @@
     {"roomId":{"name":"rm_lift_scene","path":"rooms/rm_lift_scene/rm_lift_scene.yy",},},
     {"roomId":{"name":"rm_end_negative_screen","path":"rooms/rm_end_negative_screen/rm_end_negative_screen.yy",},},
     {"roomId":{"name":"rm_first_playable_end","path":"rooms/rm_first_playable_end/rm_first_playable_end.yy",},},
+    {"roomId":{"name":"rm_floor2","path":"rooms/rm_floor2/rm_floor2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
