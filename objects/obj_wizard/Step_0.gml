@@ -13,6 +13,10 @@ if (global.inventory.torch){
 	sprite_index = _characters[0]
 }
 
+if (h_time>0){
+	h_time-=1
+}
+
 
 xspd = (moveRight - moveLeft) * my_speed;
 yspd = (moveDown - moveUp) * my_speed;
@@ -42,7 +46,7 @@ if (keyboard_check_pressed(ord("F"))
 // Battery drain
 if (flashlight_on) {
     battery -= 0.05;
-	if (battery<10) {
+	if (battery==10) {
 		scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false)
 	}
     if (battery <= 0) {

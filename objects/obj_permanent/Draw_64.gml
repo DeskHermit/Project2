@@ -1,6 +1,6 @@
 display_set_gui_size(1920, 1080);
 
-if (!array_contains(no_rooms, room) || room == rm_notes) {
+if (!array_contains(no_rooms, room) && !array_contains(table_rooms,room)) {
     var _tx = 1800;
     var _ty = 40;
     
@@ -12,14 +12,13 @@ if (!array_contains(no_rooms, room) || room == rm_notes) {
 }
 
 if (!array_contains(no_rooms, room)) {
-    #region INVENTORY DRAW (Compact Version)
+    #region
 
-    // SET YOUR SIZE HERE (0.7 is 70% of original size)
     var inv_scale = 0.7; 
     
     var slot_w = sprite_get_width(spr_inventorybox) * inv_scale;
     var slot_h = sprite_get_height(spr_inventorybox) * inv_scale;
-    var spacing = 6; // Reduced spacing for smaller boxes
+    var spacing = 6;
     
     var total_w = (slot_w * maxInvSlots) + (spacing * (maxInvSlots - 1));
 
@@ -34,7 +33,6 @@ if (!array_contains(no_rooms, room)) {
         var itemY = startInvY;
         var is_hovered = (mx >= itemX && mx <= itemX + slot_w && my >= itemY && my <= itemY + slot_h);
 
-        // Draw the slot background scaled down
         draw_sprite_ext(spr_inventorybox, 0, itemX, itemY, inv_scale, inv_scale, 0, c_white, 1);
 
         var item = global.inventory.items[inv];
@@ -43,19 +41,12 @@ if (!array_contains(no_rooms, room)) {
             var spr = object_get_sprite(item);
             
             if (spr != -1) {
-                // --- HANDLE INTERACTION ---
                 if (is_hovered && mouse_check_button_pressed(mb_left)) {
-                    
-                    // DROP LOGIC: If we are in a table room, drop the item
                     if (array_contains(table_rooms, room)) {
                         var _list = global.storage[$ global.store_id]
                         
                         if (!is_undefined(_list)) {
-                            // 1. Add to the Global Data (Saves it)
                             array_push(_list, item)
-                            
-                            // 2. Create the physical object on the table
-                            // We use the storage manager's position as the anchor
                             if (instance_exists(obj_storage_manager)) {
                                 var _rx = obj_storage_manager.x + irandom_range(40, 400)
                                 var _ry = obj_storage_manager.y + irandom_range(20, 150)
@@ -65,22 +56,31 @@ if (!array_contains(no_rooms, room)) {
                                 _inst.image_yscale = 0.6
                                 _inst.depth = obj_storage_manager.depth - 10
                             }
-                            
-                            // 3. Remove from Inventory
                             global.inventory.items[inv] = noone
-                            show_debug_message("Dropped " + object_get_name(item) + " onto table.")
+                            if (global.debug) 
+								show_debug_message("Dropped " + object_get_name(item) + " onto table.")
                         }
                     } 
-                    // USE LOGIC: If NOT in a table room, use the item
                     else {
                         if (item == obj_battery_3D) {
                             if (instance_exists(_wiz)) {
                                 _wiz.battery = 100
                                 _wiz.flashlight_on = true
                                 global.inventory.items[inv] = noone
-                                show_debug_message("Battery Consumed")
+								if (global.debug) 
+									show_debug_message("Battery Consumed")
                             }
                         }
+						
+						if (item == obj_burger_3D) {
+							global.inventory.hp = clamp(global.inventory.hp+30,0,100)
+                            global.inventory.items[inv] = noone
+						}
+						
+						if (item == obj_chips_3D) {
+							global.inventory.hp = clamp(global.inventory.hp+10,0,100)
+                            global.inventory.items[inv] = noone
+						}
                         
                         if (item == obj_notes_3D) {
                             scr_note(global.heading, global.content)
