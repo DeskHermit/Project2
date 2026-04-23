@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_chips_3D",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_restroom",
+  "eventList":[],
   "managed":true,
-  "name":"obj_chips_3D",
+  "name":"obj_restroom",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects 3D",
-    "path":"folders/objects/objects 3D.yy",
+    "name":"objects 2D",
+    "path":"folders/objects/objects 2D.yy",
   },
-  "parentObjectId":{
-    "name":"obj_item_parent",
-    "path":"objects/obj_item_parent/obj_item_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_chips_3D",
-    "path":"sprites/spr_chips_3D/spr_chips_3D.yy",
+    "name":"spr_restroom",
+    "path":"sprites/spr_restroom/spr_restroom.yy",
   },
   "spriteMaskId":null,
   "visible":true,
