@@ -8,8 +8,8 @@ if (_hover) {
     if (mouse_check_button_pressed(mb_left)) {
         global.inventory.torch = true;
         
-        scr_textbox("Press F to toggle Flashlight", c_lime, , , 50, 300);
-        scr_textbox("You can collect battery and use them to continue fill charge.", c_lime, , , 100, 300);
+        scr_textbox("Torch acquired! Toggle F and aim your light.", c_lime, , , 50, 300,,true);
+        scr_textbox("Careful: The light scares bats but drains your battery! Use battery to refill the bar", c_lime, , , 100, 300,,true);
         
         instance_destroy();
     }

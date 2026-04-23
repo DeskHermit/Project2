@@ -1,12 +1,16 @@
 var p = instance_find(obj_wizard, 0);
-hp = global.inventory.hp
+if (global.inventory.hp_cheat)
+	hp = 100
+else
+	hp = global.inventory.hp
 
 if (p != noone) {
     var inv_scale = 0.5; 
     
     var lx = 10;
     var ly = 20;
-    var hp_percent = hp / 100;
+	var hp_percent;
+	hp_percent = hp / 100;
     var l_fill_x = lx + (8 * inv_scale);
     var l_fill_y = ly + (6 * inv_scale);
     var l_max_w  = 580 * inv_scale;
@@ -14,8 +18,16 @@ if (p != noone) {
     var l_fill_h = 52 * inv_scale;
 
     if (hp > 0) {
-        var l_col_top = c_red;
-        var l_col_bot = make_color_rgb(150, 0, 0);
+		var l_col_top
+		var l_col_bot
+		if (global.inventory.hp_cheat){
+			l_col_top = c_blue;
+			l_col_bot = c_green;
+		}
+		else{
+			l_col_top = c_red;
+			l_col_bot = make_color_rgb(150, 0, 0);
+		}
         
         draw_rectangle_colour(l_fill_x, l_fill_y, l_fill_x + l_fill_w, l_fill_y + l_fill_h, l_col_top, l_col_top, l_col_bot, l_col_bot, false);
         draw_set_alpha(0.3);

@@ -5,7 +5,7 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
     var _key_slot = -1
     if (key_needed) {
         for (var i = 0; i < array_length(global.inventory.items); i++) {
-            if (global.inventory.items[i] == obj_key_3D) {
+            if (global.inventory.items[i] == obj_id_card_3D) {
                 _has_key = true
                 _key_slot = i
                 break
@@ -21,7 +21,7 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
             image_xscale = 1
             image_yscale = 1
         } else {
-            scr_textbox("You need the key!", c_red, , , 50)
+            scr_textbox("You need the id card!", c_red, , , 50)
         }
     } else {
         is_unlocked = true
