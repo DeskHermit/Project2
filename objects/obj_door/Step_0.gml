@@ -24,8 +24,8 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
             scr_textbox("You need the key!", c_red, , , 50)
         }
     } else {
-        is_unlocked = true
-        solid = false 
+        is_unlocked = true 
+		solid = false
         sprite_index = spr_door_animation
         image_speed = 1
         image_xscale = 1

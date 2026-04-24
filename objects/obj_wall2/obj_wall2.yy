@@ -9,7 +9,10 @@
     "name":"objects 2D",
     "path":"folders/objects/objects 2D.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_outside_wall",
+    "path":"objects/obj_outside_wall/obj_outside_wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
