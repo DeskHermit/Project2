@@ -29,7 +29,8 @@ if (xspd != 0 or yspd != 0) {
     image_index = 1
 }
 
-move_and_collide(xspd,yspd,[obj_collision]);
+move_and_collide(xspd,yspd,[obj_collision, obj_door]);
+
 
 // Toggle flashlight
 if (keyboard_check_pressed(ord("F")) && global.inventory.torch) {
