@@ -35,6 +35,7 @@ if (is_paused && !saved) {
     with (ob_qu) {
         image_xscale = 350 / sprite_get_width(sprite_index);
         image_yscale = image_xscale;
+		ob_qu.b_room = 0
     }
 
     saved = true;
