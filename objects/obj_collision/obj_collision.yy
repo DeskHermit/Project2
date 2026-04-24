@@ -8,8 +8,8 @@
   "name":"obj_collision",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects 2D",
-    "path":"folders/objects/objects 2D.yy",
+    "name":"Project2",
+    "path":"Project2.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
