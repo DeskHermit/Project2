@@ -18,7 +18,7 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
         global.last_room = room;
         room_goto(rm_door_break);
     } else {
-        show_debug_message("You need the hammer.");
+		scr_textbox("You need the hammer!",c_red,,,50)
     }
 }
 

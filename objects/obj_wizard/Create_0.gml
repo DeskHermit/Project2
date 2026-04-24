@@ -8,3 +8,5 @@ battery = 100;
 maxInvSlots = 5;
 _no_rooms = [rm_door_break];
 _rooms = [rm_tutorial];
+
+h_time = 0

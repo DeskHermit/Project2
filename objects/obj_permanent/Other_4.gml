@@ -6,9 +6,9 @@ switch (room) {
 		}
 		break
 	case rm_tutorial:
-		if (global.first_time && _tutorial) {
-			scr_textbox("You can also press the First letter of buttons to press them", c_white,,,50,300)
-			scr_textbox("Use WASD to move around", c_yellow,,,,300,,true)
+		if (global.first_time && _tutorial) {	
+			scr_textbox("It is dark! Find the table and acquire the torch!", c_lime,,,100,300,,true)
+			scr_textbox("Use WASD to move around. Press space to close.", c_yellow,,,,300,,true)
 			_tutorial = !_tutorial
 		}
 		break
