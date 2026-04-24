@@ -111,6 +111,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"obj_wall2","path":"objects/obj_wall2/obj_wall2.yy",},},
     {"id":{"name":"obj_wizard","path":"objects/obj_wizard/obj_wizard.yy",},},
+    {"id":{"name":"croc_path","path":"paths/croc_path/croc_path.yy",},},
     {"id":{"name":"Path1","path":"paths/Path1/Path1.yy",},},
     {"id":{"name":"rm_door_break","path":"rooms/rm_door_break/rm_door_break.yy",},},
     {"id":{"name":"rm_end_negative_screen","path":"rooms/rm_end_negative_screen/rm_end_negative_screen.yy",},},
