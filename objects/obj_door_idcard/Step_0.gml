@@ -1,6 +1,7 @@
-var _contact = place_meeting(x, y, obj_wizard)
+var _contact = place_meeting(x+1, y-1, obj_wizard)
+var _contact1 = place_meeting(x-1, y+1, obj_wizard)
 
-if (_contact && keyboard_check_pressed(ord("E"))) {
+if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
     var _has_key = false
     var _key_slot = -1
     if (key_needed) {
@@ -31,10 +32,23 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
         image_xscale = 1
         image_yscale = 1
     }
+	if (!instance_exists(obj_textbox)){
+		switch (id){
+			case (inst_sg_door):
+				scr_textbox("Welcome to room 210", c_white, , , 50)
+				break;
+			case (inst_su_200):
+				scr_textbox("Welcome to room 200", c_white, , , 50)
+				break;	
+			case (inst_su_230):
+				scr_textbox("Welcome to room 230", c_white, , , 50)
+				break;
+		}
+	}
 }
 
 if (sprite_index != spr_door_animation) {
-    if (_contact) {
+    if (_contact|| _contact1) {
         image_index = is_unlocked ? 3 : 1
     } else {
         image_index = is_unlocked ? 2 : 0
