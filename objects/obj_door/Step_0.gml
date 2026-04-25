@@ -18,8 +18,6 @@ if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
             solid = false 
             sprite_index = spr_door_animation
             image_speed = 1
-            image_xscale = 1
-            image_yscale = 1
         } else {
             scr_textbox("You need the key!", c_red, , , 50)
         }
@@ -28,8 +26,6 @@ if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
 		solid = false
         sprite_index = spr_door_animation
         image_speed = 1
-        image_xscale = 1
-        image_yscale = 1
     }
 	if (!instance_exists(obj_textbox)){
 		switch (id){

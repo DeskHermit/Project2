@@ -1,4 +1,4 @@
-sprglobal.debug = true;
+global.debug = true;
 
 _wiz = instance_find(obj_wizard,0)
 if (instance_exists(_wiz)){
@@ -14,15 +14,17 @@ global.first_time = true
 _tutorial = true
 
 no_rooms = [
-    rm_end_negative_screen,
+    rm_end_negative_screen_1,
     rm_end_positive_screen,
     rm_door_break,
     rm_title_screen,
-	rm_notes
+	rm_notes,
 ]
 
 table_rooms = [
-    rm_outside_table
+    rm_outside_table,
+	rm_floor_table,
+	rm_floor_cuboard
 ]
 
 global.store_id = "outsidetable2"

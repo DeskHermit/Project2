@@ -1,1 +1,1 @@
-room_goto(rm_first_playable_end)
+room_goto(rm_floor1)

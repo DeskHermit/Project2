@@ -6,6 +6,8 @@ if (h_time<=0) {
 	}
 	h_time = 360
 	if (global.inventory.hp<=0){
+		if (global.debug)
+			show_debug_message("hp < 0")
 		room_goto(rm_end_negative_screen);
 	}
 }

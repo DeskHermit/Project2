@@ -34,8 +34,12 @@ for (var i = 0; i < 5; i++) {
                 if (!_already_exists) {
                     array_push(_list, _item);
                     
-                    var _rx = x + irandom_range(40, 400);
-                    var _ry = y + irandom_range(20, 150);
+	                var _rx = x + irandom_range(40, 400);
+	                var _ry = y + irandom_range(20, 150);
+					if (!iftable){
+						_rx = x + irandom_range(20, 205)
+						_ry = y + irandom_range(20, 827)
+					}
                     var _inst = instance_create_layer(_rx, _ry, "Instances", _item);
                     
                     _inst.image_xscale = 0.6;

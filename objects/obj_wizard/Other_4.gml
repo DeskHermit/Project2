@@ -1,4 +1,4 @@
-if (room == rm_tutorial && global.reset_to_start) {
+if ((room == rm_tutorial || rm_floor3) && global.reset_to_start) {
     x = 1856;
     y = 832;
 	flashlight_on = false;
