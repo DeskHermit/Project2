@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_staff_3D",
+  "%Name":"obj_portal_exit",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_staff_3D",
+  "name":"obj_portal_exit",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects 3D",
-    "path":"folders/objects/objects 3D.yy",
+    "name":"objects 2D",
+    "path":"folders/objects/objects 2D.yy",
   },
-  "parentObjectId":{
-    "name":"obj_item_parent",
-    "path":"objects/obj_item_parent/obj_item_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_staff_3D",
-    "path":"sprites/spr_staff_3D/spr_staff_3D.yy",
+    "name":"spr_portal_animation",
+    "path":"sprites/spr_portal_animation/spr_portal_animation.yy",
   },
   "spriteMaskId":null,
   "visible":true,

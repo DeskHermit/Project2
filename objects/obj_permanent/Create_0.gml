@@ -19,6 +19,9 @@ no_rooms = [
     rm_door_break,
     rm_title_screen,
 	rm_notes,
+	rm_portal,
+	rm_steps,
+	rm_lift_scene,
 ]
 
 table_rooms = [

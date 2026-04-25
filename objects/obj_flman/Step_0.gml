@@ -14,9 +14,10 @@ if (_wiz != noone) {
         image_angle = point_direction(x, y, _wiz.x, _wiz.y) - 90;
 
         if (_dist >= lose_range) {
-            is_chasing = false;
-            path_start(patrol_path, patrol_speed, path_action_restart, false);
-        }
+		    is_chasing = false;
+		    speed = 0;
+		    path_start(patrol_path, patrol_speed, path_action_continue, true);
+		}
     } else {
         image_angle = direction - 90;
     }

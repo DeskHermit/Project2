@@ -19,7 +19,7 @@ for (var i = 0; i < 5; i++) {
             var _list = global.storage[$ global.store_id];
             
             if (!is_undefined(_list)) {
-                var _is_unique = (_item == obj_torch_3D || _item == obj_staff_3D);
+                var _is_unique = (_item == obj_flashlight_3D || _item == obj_staff_3D);
                 var _already_exists = false;
                 
                 if (_is_unique) {
@@ -37,8 +37,8 @@ for (var i = 0; i < 5; i++) {
 	                var _rx = x + irandom_range(40, 400);
 	                var _ry = y + irandom_range(20, 150);
 					if (!iftable){
-						_rx = x + irandom_range(20, 205)
-						_ry = y + irandom_range(20, 827)
+						_rx = x + irandom_range(20, 185)
+						_ry = y + irandom_range(20, 527)
 					}
                     var _inst = instance_create_layer(_rx, _ry, "Instances", _item);
                     
@@ -46,7 +46,7 @@ for (var i = 0; i < 5; i++) {
                     _inst.image_yscale = 0.6;
                     _inst.depth = depth - 10;
                     
-                    if (_item == obj_torch_3D) global.inventory.torch = false;
+                    if (_item == obj_flashlight_3D) global.inventory.torch = false;
                     if (_item == obj_staff_3D) global.inventory.staff = false;
                     
                     global.inventory.items[i] = noone;

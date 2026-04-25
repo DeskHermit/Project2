@@ -1,1 +1,1 @@
-room_goto(rm_floor1)
+room_goto(rm_floor2)
