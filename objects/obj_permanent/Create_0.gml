@@ -1,4 +1,4 @@
-global.debug = true;
+sprglobal.debug = true;
 
 _wiz = instance_find(obj_wizard,0)
 if (instance_exists(_wiz)){

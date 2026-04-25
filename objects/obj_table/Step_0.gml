@@ -10,5 +10,5 @@ if (keyboard_check_pressed(ord("E")) && _contact)
 {
 	global.store_id = table_key
 	show_debug_message(table_key)
-	room_goto(rm_outside_table)
+	room_goto(room_key)
 }
