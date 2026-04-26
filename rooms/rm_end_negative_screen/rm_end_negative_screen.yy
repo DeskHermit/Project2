@@ -1,14 +1,14 @@
 {
   "$GMRoom":"v1",
-  "%Name":"rm_end_negative_screen_1",
+  "%Name":"rm_end_negative_screen",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_614C70B0_1","path":"rooms/rm_end_negative_screen_1/rm_end_negative_screen_1.yy",},
-    {"name":"inst_3508D540_1","path":"rooms/rm_end_negative_screen_1/rm_end_negative_screen_1.yy",},
-    {"name":"inst_4EB98B34_1","path":"rooms/rm_end_negative_screen_1/rm_end_negative_screen_1.yy",},
+    {"name":"inst_614C70B0_1","path":"rooms/rm_end_negative_screen/rm_end_negative_screen.yy",},
+    {"name":"inst_3508D540_1","path":"rooms/rm_end_negative_screen/rm_end_negative_screen.yy",},
+    {"name":"inst_4EB98B34_1","path":"rooms/rm_end_negative_screen/rm_end_negative_screen.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -19,7 +19,7 @@
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":0.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_title","path":"sprites/spr_title/spr_title.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"rm_end_negative_screen_1",
+  "name":"rm_end_negative_screen",
   "parent":{
     "name":"rooms",
     "path":"folders/rooms.yy",

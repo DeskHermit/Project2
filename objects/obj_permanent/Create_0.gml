@@ -14,7 +14,7 @@ global.first_time = true
 _tutorial = true
 
 no_rooms = [
-    rm_end_negative_screen_1,
+    rm_end_negative_screen,
     rm_end_positive_screen,
     rm_door_break,
     rm_title_screen,
@@ -31,5 +31,3 @@ table_rooms = [
 ]
 
 global.store_id = "outsidetable2"
-
-global.reset_to_start = true
