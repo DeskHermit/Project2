@@ -1,4 +1,4 @@
-patrol_path = croc_path;
+patrol_path = path;
 patrol_speed = 1;
 chase_speed = 1.5;
 

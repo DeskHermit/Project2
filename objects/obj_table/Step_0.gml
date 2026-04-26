@@ -7,7 +7,8 @@ if (_contact) {
 }
 
 if (keyboard_check_pressed(ord("E")) && _contact)
-{
+{	
+	audio_play_sound(snd_table,40,false)
 	global.store_id = table_key
 	show_debug_message(table_key)
 	room_goto(room_key)

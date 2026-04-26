@@ -14,15 +14,16 @@ if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
 
         if (_has_key) {
             global.inventory.items[_key_slot] = noone
+			audio_play_sound(snd_door_open,20,false)
             is_unlocked = true
             solid = false 
             sprite_index = spr_door_animation
             image_speed = 1
-			audio_play_sound(snd_door_open,20,false)
         } else {
             scr_textbox("You need the key!", c_red, , , 50)
         }
     } else {
+		audio_play_sound(snd_door_open,20,false)
         is_unlocked = true 
 		solid = false
         sprite_index = spr_door_animation

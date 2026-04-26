@@ -11,6 +11,8 @@ switch (room) {
 			scr_textbox("Use WASD to move around. Press space to close.", c_yellow,,,,300,,true)
 			_tutorial = !_tutorial
 		}
+		if (!audio_is_playing(snd_night))
+			audio_play_sound(snd_night,30,true)
 		break
 	case rm_first_playable_end:
 		if (global.first_time) {
@@ -19,9 +21,12 @@ switch (room) {
 		break
 	case rm_notes:
 		scr_note(global.heading, global.content)
+	case rm_floor1:
+		if (!audio_is_playing(snd_airvents))
+			audio_play_sound(snd_airvents,30,true)
 }
 
-if ((!array_contains(no_rooms,room) && !array_contains(table_rooms,room))) {
+if ((!array_contains(no_rooms,room) && !array_contains(table_rooms,room)) && c_room==room) {
 	_wiz = instance_find(obj_wizard,0)
 	_wiz.x=wiz_x
 	_wiz.y=wiz_y

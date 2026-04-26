@@ -37,7 +37,7 @@ for (var i = 0; i < 5; i++) {
 	                var _rx = x + irandom_range(40, 400);
 	                var _ry = y + irandom_range(20, 150);
 					if (!iftable){
-						_rx = x + irandom_range(20, 185)
+						_rx = x + irandom_range(20, 105)
 						_ry = y + irandom_range(20, 527)
 					}
                     var _inst = instance_create_layer(_rx, _ry, "Instances", _item);

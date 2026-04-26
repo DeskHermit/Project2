@@ -13,10 +13,15 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
     }
 
     if (_has_hammer) {
-        global.inventory.items[_hammer_slot] = noone;
-        is_unlocked = true;
-        global.last_room = room;
-        room_goto(rm_lift_scene);
+		if (global.inventory.torch) {
+	        global.inventory.items[_hammer_slot] = noone;
+	        is_unlocked = true;
+	        global.last_room = room;
+	        room_goto(rm_door_break);
+		}
+		else{ 
+			scr_textbox("You need the torch before continuing!",c_red,,,50)
+		}
     } else {
 		scr_textbox("You need the hammer!",c_red,,,50)
     }

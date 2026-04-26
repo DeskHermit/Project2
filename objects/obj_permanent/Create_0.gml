@@ -9,6 +9,8 @@ if (instance_exists(_wiz)){
 	wiz_y=832
 }
 
+c_room = rm_tutorial
+
 music_timer = irandom_range(300, 900)
 music_state = "playing"
 current_music = audio_play_sound(snd_bg_music, 10, true)
