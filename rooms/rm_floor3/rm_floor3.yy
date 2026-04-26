@@ -68,7 +68,7 @@
     {"name":"inst_7D37AEAE","path":"rooms/rm_floor3/rm_floor3.yy",},
     {"name":"inst_6CC932F0","path":"rooms/rm_floor3/rm_floor3.yy",},
     {"name":"inst_A13C35E","path":"rooms/rm_floor3/rm_floor3.yy",},
-    {"name":"inst_29CF3F96","path":"rooms/rm_floor3/rm_floor3.yy",},
+    {"name":"inst_524E0A54","path":"rooms/rm_floor3/rm_floor3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -108,7 +108,9 @@
             {"$GMRInstance":"v4","%Name":"inst_A13C35E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_A13C35E","objectId":{"name":"obj_croc","path":"objects/obj_croc/obj_croc.yy",},"properties":[
                 {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_croc","path":"objects/obj_croc/obj_croc.yy",},"propertyId":{"name":"path","path":"objects/obj_croc/obj_croc.yy",},"resource":{"name":"man_path2","path":"paths/man_path2/man_path2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"man_path2",},
               ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-105.33665,"scaleX":0.20799662,"scaleY":0.25416666,"x":197.0,"y":342.78943,},
-            {"$GMRInstance":"v4","%Name":"inst_29CF3F96","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_29CF3F96","objectId":{"name":"obj_bat_tutorial","path":"objects/obj_bat_tutorial/obj_bat_tutorial.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-59.342937,"scaleX":0.15597433,"scaleY":0.1656382,"x":1387.5662,"y":253.06247,},
+            {"$GMRInstance":"v4","%Name":"inst_524E0A54","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_524E0A54","objectId":{"name":"obj_bat","path":"objects/obj_bat/obj_bat.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_bat","path":"objects/obj_bat/obj_bat.yy",},"propertyId":{"name":"path","path":"objects/obj_bat/obj_bat.yy",},"resource":{"name":"bat_path","path":"paths/bat_path/bat_path.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"bat_path",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.19166666,"scaleY":0.24166666,"x":1268.0,"y":271.30933,},
           ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
       ],"name":"Instances_above","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRPathLayer":"","%Name":"Path_3","colour":4278190335,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Path_3","pathId":{"name":"bat_path","path":"paths/bat_path/bat_path.yy",},"properties":[],"resourceType":"GMRPathLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

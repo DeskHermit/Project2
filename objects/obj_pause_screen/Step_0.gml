@@ -31,7 +31,7 @@ if (is_paused && !saved) {
         image_yscale = image_xscale;
     }
 
-    ob_qu = instance_create_depth(_gw/2, _gh/2 + 100, -10002, obj_quit);
+    ob_qu = instance_create_depth(_gw/2, _gh/2 + 100, -10002, obj_quit_1);
 	ob_qu.b_room = 0
     with (ob_qu) {
         image_xscale = 350 / sprite_get_width(sprite_index);

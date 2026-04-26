@@ -31,3 +31,9 @@ if ((!array_contains(no_rooms,room) && !array_contains(table_rooms,room)) && c_r
 	_wiz.x=wiz_x
 	_wiz.y=wiz_y
 }
+
+if (room == rm_portal || room == rm_lift_scene || room == rm_steps || room == rm_door_break) {
+	silent = true
+} else {
+	silent = false
+}

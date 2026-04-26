@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.48,
+  "duration":0.19201814,
   "exportDir":"",
   "name":"snd_table",
   "parent":{

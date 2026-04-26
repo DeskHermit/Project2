@@ -10,12 +10,16 @@ if (_contact) {
     }
 
     if (_has_id) {
-        if (room != rm_steps &&  keyboard_check(ord("E"))) {
-            room_goto(rm_steps)
+        if (room != rm_steps) {
+			if (keyboard_check(ord("E"))){
+				room_goto(rm_steps)
+			} else{ 
+				scr_textbox("Press E to climb!", c_green, , , 50)
+			}
         }
     } else {
         if (!instance_exists(obj_textbox)) {
-            scr_textbox("Need id_card before continuing!", c_green, , , 50)
+            scr_textbox("Need id_card before continuing!", c_red, , , 50)
         }
     }
 }

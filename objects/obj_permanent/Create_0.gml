@@ -9,6 +9,9 @@ if (instance_exists(_wiz)){
 	wiz_y=832
 }
 
+global.chasing = false
+silent = false
+
 c_room = rm_tutorial
 
 music_timer = irandom_range(300, 900)

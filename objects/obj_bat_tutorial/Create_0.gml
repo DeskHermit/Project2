@@ -1,5 +1,6 @@
 patrol_path = Path1;
 patrol_speed = 2;
+_room = room
 chase_speed = 3;
 
 detect_range = 140;
@@ -17,5 +18,9 @@ visible_in_light = false;
 has_been_seen = false;
 seen_timer = 0;
 seen_time_max = room_speed*2; 
+
+spawn_x = x;
+spawn_y = y;
+is_returning = false;
 
 audio_falloff_set_model(audio_falloff_linear_distance);
