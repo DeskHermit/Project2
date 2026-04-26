@@ -18,7 +18,12 @@ if (_wiz != noone) {
 		    speed = 0;
 		    path_start(patrol_path, patrol_speed, path_action_continue, true);
 		}
+		
+		audio_sound_gain(snd_high_chase_bg_music, .6, 1000)
+		audio_sound_gain(snd_bg_music, 0, 1000)
     } else {
         image_angle = direction - 90;
+		audio_sound_gain(snd_high_chase_bg_music, 0, 1000)
+		audio_sound_gain(snd_bg_music, .6, 1000)
     }
 }

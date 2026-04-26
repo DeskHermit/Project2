@@ -2,7 +2,7 @@ squeak_timer--;
 
 if (squeak_timer <= 0) {
     audio_play_sound_at(
-        bat_chirp,
+        snd_bat_chirp,
         x, y, 0, 
         400,
         100,

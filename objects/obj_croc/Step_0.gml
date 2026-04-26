@@ -13,6 +13,8 @@ if (_wiz != noone) {
     if (is_chasing) {
         move_towards_point(_wiz.x, _wiz.y, chase_speed);
         image_angle = point_direction(x, y, _wiz.x, _wiz.y) - 90;
+		audio_sound_gain(snd_high_chase_bg_music, .6, 1000)
+		audio_sound_gain(snd_bg_music, 0, 1000)
 
         if (_dist >= lose_range) {
             is_chasing = false;
@@ -20,5 +22,7 @@ if (_wiz != noone) {
         }
     } else {
         image_angle = direction - 90;
+		audio_sound_gain(snd_high_chase_bg_music, 0, 1000)
+		audio_sound_gain(snd_bg_music, .6, 1000)
     }
 }

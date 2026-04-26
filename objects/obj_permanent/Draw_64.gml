@@ -56,6 +56,7 @@ if (!array_contains(no_rooms, room)) {
                                 _inst.image_yscale = 0.6
                                 _inst.depth = obj_storage_manager.depth - 10
                             }
+							audio_play_sound(snd_pickup_item, 10, false);
                             global.inventory.items[inv] = noone
                             if (global.debug) 
 								show_debug_message("Dropped " + object_get_name(item) + " onto table.")
@@ -66,6 +67,7 @@ if (!array_contains(no_rooms, room)) {
                             if (instance_exists(_wiz)) {
                                 _wiz.battery = 100
                                 _wiz.flashlight_on = true
+								audio_play_sound(snd_pickup_item, 10, false);
                                 global.inventory.items[inv] = noone
 								if (global.debug) 
 									show_debug_message("Battery Consumed")
@@ -74,16 +76,19 @@ if (!array_contains(no_rooms, room)) {
 						
 						if (item == obj_burger_3D) {
 							global.inventory.hp = clamp(global.inventory.hp+30,0,100)
+							audio_play_sound(snd_nom, 10, false)
                             global.inventory.items[inv] = noone
 						}
 						
 						if (item == obj_chips_3D) {
 							global.inventory.hp = clamp(global.inventory.hp+10,0,100)
+							audio_play_sound(snd_nom, 10, false)
                             global.inventory.items[inv] = noone
 						}
                         
                         if (item == obj_notes_3D) {
                             scr_note(global.heading, global.content)
+							audio_play_sound(snd_paper, 10, false)
                         }
                     }
                 }

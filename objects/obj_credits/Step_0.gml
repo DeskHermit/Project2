@@ -9,12 +9,12 @@ if (position_meeting(_mx, _my, id)) {
     }
 	
 	if (mouse_check_button_pressed(mb_left)) {
-		// audio_play_sound(b_click,10,false)
+		audio_play_sound(b_click,10,false)
 	}
     
     if (mouse_check_button_released(mb_left)) {
 		if (!instance_exists(obj_transition)) {
-			// audio_play_sound(b_clicked,10,false)
+			audio_play_sound(b_clicked,10,false)
 			global.heading="Credits"
 			global.content=["Abishek Tony","Derek","Caleb","Sule"]
 			room_goto(rm_notes)
@@ -22,4 +22,13 @@ if (position_meeting(_mx, _my, id)) {
     }
 } else {
     image_index = 0
+}
+
+if (b_key!=noone){
+	if (keyboard_check_pressed(ord(b_key))){
+		if (!instance_exists(obj_transition)) {
+			audio_play_sound(b_clicked,10,false)
+	        scr_fade(b_room)
+		}
+	}
 }

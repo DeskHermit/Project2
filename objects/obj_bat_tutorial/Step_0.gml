@@ -70,7 +70,7 @@ if (squeak_timer <= 0) {
         if (is_chasing) _vol = clamp(_vol + 0.3, 0.1, 1.0);
     }
 
-    var _snd = audio_play_sound_at(bat_chirp, x, y, 0, 100, 800, 1, false, 10);
+    var _snd = audio_play_sound_at(snd_bat_chirp, x, y, 0, 100, 800, 1, false, 10);
     audio_sound_gain(_snd, _vol, 0);
     audio_sound_pitch(_snd, random_range(0.8, 1.2)); // Variety!
 

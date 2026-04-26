@@ -8,6 +8,12 @@ if (instance_exists(_wiz)){
 	wiz_x=1632
 	wiz_y=832
 }
+
+music_timer = irandom_range(300, 900)
+music_state = "playing"
+current_music = audio_play_sound(snd_bg_music, 10, true)
+music_vol = 1
+
 maxInvSlots = 5
 
 global.first_time = true

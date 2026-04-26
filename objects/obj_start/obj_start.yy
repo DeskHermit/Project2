@@ -30,8 +30,8 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"b_room","filters":[],"listItems":[],"multiselect":false,"name":"b_room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
-    {"$GMObjectProperty":"v2","%Name":"b_click","filters":[],"listItems":[],"multiselect":false,"name":"b_click","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
-    {"$GMObjectProperty":"v2","%Name":"b_clicked","filters":[],"listItems":[],"multiselect":false,"name":"b_clicked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"b_click","filters":[],"listItems":[],"multiselect":false,"name":"b_click","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"snd_button_click_sound","path":"sounds/snd_button_click_sound/snd_button_click_sound.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"snd_button_click_sound","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"b_clicked","filters":[],"listItems":[],"multiselect":false,"name":"b_clicked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"snd_button_clicked_sound","path":"sounds/snd_button_clicked_sound/snd_button_clicked_sound.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"snd_button_clicked_sound","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"b_key","filters":[],"listItems":[],"multiselect":false,"name":"b_key","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"S","varType":2,},
   ],
   "resourceType":"GMObject",

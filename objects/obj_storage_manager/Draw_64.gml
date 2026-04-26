@@ -42,6 +42,8 @@ for (var i = 0; i < 5; i++) {
 					}
                     var _inst = instance_create_layer(_rx, _ry, "Instances", _item);
                     
+					audio_play_sound(snd_pickup, 10, false);
+					
                     _inst.image_xscale = 0.6;
                     _inst.image_yscale = 0.6;
                     _inst.depth = depth - 10;

@@ -16,7 +16,7 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
         global.inventory.items[_hammer_slot] = noone;
         is_unlocked = true;
         global.last_room = room;
-        room_goto(rm_door_break);
+        room_goto(rm_lift_scene);
     } else {
 		scr_textbox("You need the hammer!",c_red,,,50)
     }

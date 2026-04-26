@@ -16,13 +16,13 @@ if (is_paused && !saved) {
         image_yscale = image_xscale;
     }
 	
-	ob_mu = instance_create_depth(_gw - 100, 15, -10002, obj_mute)
+	/*ob_mu = instance_create_depth(_gw - 100, 15, -10002, obj_mute)
     ob_mu.pause = true
     instance_activate_object(ob_mu)
     with (ob_mu) {
         image_xscale = 120 / sprite_get_width(sprite_index); // Slightly bigger mute
         image_yscale = image_xscale;
-    }
+    }*/
     
     // Create Buttons relative to the center
     ob_res = instance_create_depth(_gw/2, _gh/2 - 60, -10002, obj_resume);
@@ -42,7 +42,7 @@ if (is_paused && !saved) {
 }
 
 if (!is_paused && saved){
-	instance_destroy(ob_mu)
+	//instance_destroy(ob_mu)
     instance_destroy(ob_res)
     instance_destroy(ob_qu)
 	instance_destroy(ob_panel)

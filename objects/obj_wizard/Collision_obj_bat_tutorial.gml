@@ -1,6 +1,6 @@
 
 if (h_time<=0) {
-	audio_play_sound(wizard_death_temp, 10, false);
+	audio_play_sound(snd_wizard_death_temp, 10, false);
 	if (!global.inventory.hp_cheat){
 		global.inventory.hp -= 10
 	}

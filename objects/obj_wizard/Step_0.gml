@@ -3,6 +3,19 @@ moveLeft = keyboard_check(vk_left) or keyboard_check(ord("A"))
 moveUp = keyboard_check(vk_up) or keyboard_check(ord("W"))
 moveDown = keyboard_check(vk_down) or keyboard_check(ord("S"))
 
+if (moveRight > 0 || moveLeft > 0 || moveUp > 0 || moveDown > 0) {
+    if (!audio_is_playing(snd_walking)) {
+        audio_play_sound(snd_walking, 30, true)
+        audio_sound_gain(snd_walking, 0, 0)
+    }
+    audio_sound_gain(snd_walking, 1, 150)
+} else {
+    audio_sound_gain(snd_walking, 0, 150)
+    if (audio_sound_get_gain(snd_walking) <= 0) {
+        audio_stop_sound(snd_walking)
+    }
+}
+
 audio_listener_position(x, y, 0);
 
 if (global.inventory.torch){
