@@ -29,19 +29,6 @@ if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
         image_speed = 1
 		audio_play_sound(snd_door_open,20,false)
     }
-	if (!instance_exists(obj_textbox)){
-		switch (id){
-			case (inst_sg_door):
-				scr_textbox("Welcome to room 210", c_white, , , 50)
-				break;
-			case (inst_su_200):
-				scr_textbox("Welcome to room 200", c_white, , , 50)
-				break;	
-			case (inst_su_230):
-				scr_textbox("Welcome to room 230", c_white, , , 50)
-				break;
-		}
-	}
 }
 
 if (sprite_index != spr_door_animation) {
