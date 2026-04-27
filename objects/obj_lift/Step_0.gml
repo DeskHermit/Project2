@@ -15,6 +15,7 @@ if (_contact) {
         if (room != rm_lift_scene) {
 			if (keyboard_check(ord("E"))){
 				global.inventory.items[_index] = noone
+				room_persistent = false
 				room_goto(rm_lift_scene)
 			} else{ 
 				scr_textbox("Press E to use lift!", c_green, , , 50)

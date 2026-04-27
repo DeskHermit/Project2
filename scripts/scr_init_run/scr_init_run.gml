@@ -50,5 +50,8 @@ function scr_init_run() {
 	
 	global.heading = "Instructions"
 	global.content = ["Press wsad or arrow keys to control the character","Press F to toggle flashlight after obtaining flashlight"]
+
 }
+
+
 
