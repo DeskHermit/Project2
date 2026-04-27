@@ -1,5 +1,7 @@
 display_set_gui_size(1920, 1080);
 
+var _wiz = instance_find(obj_wizard, 0);
+
 if (!array_contains(no_rooms, room) && !array_contains(table_rooms,room)) {
     var _tx = 1800;
     var _ty = 40;
@@ -64,32 +66,78 @@ if (!array_contains(no_rooms, room)) {
                     } 
                     else {
                         if (item == obj_battery_3D) {
-                            if (instance_exists(_wiz)) {
-                                _wiz.battery = 100
-                                _wiz.flashlight_on = true
-								audio_play_sound(snd_pickup_item, 10, false);
-                                global.inventory.items[inv] = noone
-								if (global.debug) 
-									show_debug_message("Battery Consumed")
-                            }
-                        }
+						    if (instance_exists(_wiz)) {
+						        var _battery_bonus = floor(_wiz.battery) * 10;
+
+						        global.score += _battery_bonus;
+						        global.score = min(global.score, global.score_max);
+
+						        _wiz.battery = 100;
+						        _wiz.flashlight_on = true;
+						        audio_play_sound(snd_pickup_item, 10, false);
+						        global.inventory.items[inv] = noone;
+
+						        if (global.debug) {
+						            show_debug_message("Battery Consumed. Score bonus: " + string(_battery_bonus));
+						        }
+						    }
+						}
 						
 						if (item == obj_burger_3D) {
-							global.inventory.hp = clamp(global.inventory.hp+30,0,100)
-							audio_play_sound(snd_nom, 10, false)
-                            global.inventory.items[inv] = noone
+							var _old_hp = global.inventory.hp;
+							var _heal_amount = 30;
+							var _new_hp = _old_hp + _heal_amount;
+
+							var _overheal = max(_new_hp - 100, 0);
+
+							if (_overheal > 0) {
+								var _score_bonus = _overheal * 10;
+								global.score += _score_bonus;
+								global.score = min(global.score, global.score_max);
+							}
+
+							global.inventory.hp = clamp(_new_hp, 0, 100);
+
+							if (instance_exists(_wiz)) {
+								if (_overheal > 0) {
+									_wiz.overheal_time = 60;
+								}
+								else {
+									_wiz.food_time = 45;
+								}
+							}
+
+							audio_play_sound(snd_nom, 10, false);
+							global.inventory.items[inv] = noone;
 						}
 						
 						if (item == obj_chips_3D) {
-							global.inventory.hp = clamp(global.inventory.hp+10,0,100)
-							audio_play_sound(snd_nom, 10, false)
-                            global.inventory.items[inv] = noone
+							var _old_hp = global.inventory.hp;
+							var _heal_amount = 10;
+							var _new_hp = _old_hp + _heal_amount;
+
+							var _overheal = max(_new_hp - 100, 0);
+
+							if (_overheal > 0) {
+								var _score_bonus = _overheal * 10;
+								global.score += _score_bonus;
+								global.score = min(global.score, global.score_max);
+							}
+
+							global.inventory.hp = clamp(_new_hp, 0, 100);
+
+							if (instance_exists(_wiz)) {
+								if (_overheal > 0) {
+									_wiz.overheal_time = 60;
+								}
+								else {
+									_wiz.food_time = 45;
+								}
+							}
+
+							audio_play_sound(snd_nom, 10, false);
+							global.inventory.items[inv] = noone;
 						}
-                        
-                        if (item == obj_notes_3D) {
-                            scr_note(global.heading, global.content)
-							audio_play_sound(snd_paper, 10, false)
-                        }
                     }
                 }
                 

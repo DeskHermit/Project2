@@ -10,3 +10,5 @@ _no_rooms = [rm_door_break];
 _rooms = [rm_tutorial];
 
 h_time = 0
+food_time = 0;
+overheal_time = 0;

@@ -30,6 +30,14 @@ if (h_time>0){
 	h_time-=1
 }
 
+if (food_time > 0) {
+	food_time -= 1;
+}
+
+if (overheal_time > 0) {
+	overheal_time -= 1;
+}
+
 
 xspd = (moveRight - moveLeft) * my_speed;
 yspd = (moveDown - moveUp) * my_speed;
@@ -58,17 +66,21 @@ if (keyboard_check_pressed(ord("F"))
 } 
 
 // Battery drain
-if (flashlight_on && !global.inventory.battery_cheat) {
-    battery -= 0.05;
-	if (battery==10) {
-		scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false)
+if (flashlight_on) {
+	if (!global.inventory.battery_cheat) {
+		battery -= 0.05;
+
+		if (battery <= 10 && battery > 9.95) {
+			scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false);
+		}
 	}
-    if (battery <= 0) {
-        battery = 0;
-        flashlight_on = false;
-    }
+	else {
+		battery = 100;
+	}
+
+	if (battery <= 0) {
+		battery = 0;
+		flashlight_on = false;
+	}
 }
-if (global.inventory.battery_cheat){
-		battery = 100
-	}
 

@@ -1,10 +1,13 @@
 if (fade) {
     // --- 1. IMMEDIATE ACTIONS (Happens before the fade finishes) ---
     if (_room == -2) {
-        instance_create_depth(0, 0, -10000, obj_pause_screen)
-        instance_destroy()
-        exit
-    }
+	    if (!instance_exists(obj_pause_screen)) {
+	        instance_create_depth(0, 0, -10000, obj_pause_screen);
+	    }
+
+	    instance_destroy();
+	    exit;
+	}
     if (_room == -3) {
         if (instance_exists(obj_pause_screen)) obj_pause_screen.is_paused = false
         instance_destroy()

@@ -1,7 +1,8 @@
 patrol_path = path;
 patrol_speed = 2;
 chase_speed = 3;
-_room = room
+
+_room = room;
 
 detect_range = 140;
 lose_range = 220;
@@ -17,7 +18,7 @@ squeak_timer = irandom_range(squeak_min, squeak_max);
 visible_in_light = false;
 has_been_seen = false;
 seen_timer = 0;
-seen_time_max = room_speed*2; 
+seen_time_max = room_speed * 2;
 
 spawn_x = x;
 spawn_y = y;

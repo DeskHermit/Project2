@@ -12,6 +12,15 @@ function scr_init_run() {
 	global.first_time = true;
 	global.store_id = noone;
 	global.reset_to_start = false;
+	global.score_loss_per_second = 10;
+	global.score_max = 10000;
+	global.score = global.score_max;
+
+	global.score_started = false;
+	global.score_stopped = false;
+	global.final_score = 0;
+	
+	global.from_lift_scene = false;
 
 	global.storage = {
 	    outsidetable1 : [obj_battery_3D,obj_flashlight_3D,obj_chips_3D, obj_notes_3D],

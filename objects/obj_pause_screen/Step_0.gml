@@ -43,11 +43,17 @@ if (is_paused && !saved) {
 
 if (!is_paused && saved){
 	//instance_destroy(ob_mu)
-    instance_destroy(ob_res)
-    instance_destroy(ob_qu)
-	instance_destroy(ob_panel)
-    
-    instance_activate_all()
+	if (instance_exists(ob_res)) instance_destroy(ob_res);
+    if (instance_exists(ob_qu)) instance_destroy(ob_qu);
+    if (instance_exists(ob_panel)) instance_destroy(ob_panel);
+
+    if (surface_exists(pause_surf)) {
+        surface_free(pause_surf);
+    }
+
+    instance_activate_all();
+
+    instance_destroy();
 	/*if(global.boss==1){
 		instance_deactivate_object(instance_find(obj_boss2, 0))
 	} else {

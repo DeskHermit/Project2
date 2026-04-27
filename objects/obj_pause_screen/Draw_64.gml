@@ -18,4 +18,6 @@ if (is_paused) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_text_transformed(display_get_gui_width() / 2, 150, "PAUSED", 2, 2, 0);
+	
+	draw_text_transformed(display_get_gui_width() / 2,260,"Score: " + string(floor(global.score)),1.5,1.5,0);
 }
