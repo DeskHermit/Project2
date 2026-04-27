@@ -21,6 +21,9 @@ function scr_init_run() {
 	global.final_score = 0;
 	
 	global.from_lift_scene = false;
+	
+	global.leaderboard = [];
+	scr_load_leaderboard();
 
 	global.storage = {
 	    outsidetable1 : [obj_battery_3D,obj_flashlight_3D,obj_chips_3D, obj_notes_3D],

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_add_score_to_leaderboard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_add_score_to_leaderboard",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

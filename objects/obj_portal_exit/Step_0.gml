@@ -17,6 +17,8 @@ if (global.inventory.staff) {
         global.score_stopped = true;
         global.final_score = floor(global.score);
 
+        scr_add_score_to_leaderboard(global.final_score);
+
         global.chasing = false;
 
         if (audio_is_playing(portal_sound)) {

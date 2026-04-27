@@ -18,6 +18,13 @@ if (heading == "Epilogue") {
     _spacing = 28;
 }
 
+if (heading == "Leaderboard") {
+    _start_y = 130;
+    _draw_width = 500;
+    _line_height = 34;
+    _spacing = 18;
+}
+
 draw_set_font(fnt_heading);
 draw_set_halign(fa_center);
 draw_text(_center_x, _start_y, heading);
