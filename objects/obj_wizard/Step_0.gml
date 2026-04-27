@@ -58,7 +58,7 @@ if (keyboard_check_pressed(ord("F"))
 } 
 
 // Battery drain
-if (flashlight_on) {
+if (flashlight_on && !global.inventory.battery_cheat) {
     battery -= 0.05;
 	if (battery==10) {
 		scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false)
@@ -68,4 +68,7 @@ if (flashlight_on) {
         flashlight_on = false;
     }
 }
+if (global.inventory.battery_cheat){
+		battery = 100
+	}
 

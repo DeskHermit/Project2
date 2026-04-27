@@ -1,0 +1,1 @@
+room_set_persistent(rm_floor3, false)

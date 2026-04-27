@@ -16,7 +16,7 @@ c_room = rm_tutorial
 
 music_timer = irandom_range(300, 900)
 music_state = "playing"
-current_music = audio_play_sound(snd_bg_music, 10, true)
+current_music = audio_play_sound(snd_horror, 10, true)
 music_vol = 1
 
 maxInvSlots = 5

@@ -1,14 +1,11 @@
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("M"))) {
-	global.inventory.hp_cheat = !global.inventory.hp_cheat
-	if (global.inventory.hp_cheat)
-		scr_textbox("health cheat activated!",c_blue)
-	else
-		scr_textbox("health cheat disabled!",c_blue)
+if (keyboard_check(vk_control) && keyboard_check_pressed(ord("H"))) {
+    global.inventory.hp_cheat = !global.inventory.hp_cheat
+    scr_textbox(global.inventory.hp_cheat ? "Health cheat activated!" : "Health cheat disabled!", c_blue)
 }
 
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("M"))) {
-    global.inventory.hp_cheat = !global.inventory.hp_cheat
-    scr_textbox(global.inventory.hp_cheat ? "health cheat activated!" : "health cheat disabled!", c_blue)
+if (keyboard_check(vk_control) && keyboard_check_pressed(ord("B"))) {
+    global.inventory.battery_cheat = !global.inventory.battery_cheat
+    scr_textbox(global.inventory.battery_cheat ? "Battery cheat activated!" : "Battery cheat disabled!", c_blue)
 }
 
 if (global.chasing) {

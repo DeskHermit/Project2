@@ -1,4 +1,12 @@
 maxInvSlots = 5;
+
+if (room == rm_outside_table) {
+	audio_play_sound(snd_night,40,true)
+} else {
+	audio_play_sound(snd_airvents,40,true)
+}
+
+
 with (obj_item_parent) {
     instance_destroy();
 }

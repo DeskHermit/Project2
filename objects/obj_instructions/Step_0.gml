@@ -16,7 +16,7 @@ if (position_meeting(_mx, _my, id)) {
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
 			global.heading = "Instructions"
-			global.content = ["Press wsad or arrow keys to control the character","Press F to toggle flashlight after obtaining flashlight"]
+			global.content = ["Press wsad or arrow keys to control the character","USe mouse to click item to pickup use and drop items","Press E when E shows up when you are near an interactable objects such as table","Press F to toggle flashlight after obtaining flashlight",""]
 			room_goto(rm_notes)
 		}
     }

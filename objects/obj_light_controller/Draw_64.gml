@@ -50,6 +50,10 @@ if (p != noone) {
         if (p.battery > 0) {
             var b_col_top = c_aqua; 
             var b_col_bot = make_color_rgb(0, 150, 255);
+			if (global.inventory.battery_cheat){
+				b_col_top = c_fuchsia
+				b_col_bot = c_purple
+			}
             
             draw_rectangle_colour(b_fill_x, b_fill_y, b_fill_x + b_fill_w, b_fill_y + b_fill_h, b_col_top, b_col_top, b_col_bot, b_col_bot, false);
             

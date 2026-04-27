@@ -13,6 +13,7 @@ if (_hover && mouse_check_button_released(mb_left)) {
     var _list = global.notes[$ global.store_id];
 	if (!is_undefined(_list) && array_length(_list) > 1) {
         global.heading = _list[0];
+		global.content = []
         array_copy(global.content, 0, _list, 1,  array_length(_list) - 1);
         room_goto(rm_notes)
     }
