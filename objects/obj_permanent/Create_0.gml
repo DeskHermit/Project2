@@ -1,5 +1,7 @@
 global.debug = true;
 
+_af4 = false 
+
 _wiz = instance_find(obj_wizard,0)
 if (instance_exists(_wiz)){
 	wiz_x=_wiz.x
