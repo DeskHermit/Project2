@@ -22,9 +22,9 @@ if (position_meeting(_mx, _my, id)) {
     image_index = 0
 }
 if (b_key!=noone){
-	if (keyboard_check_pressed(ord(b_key))){
+	if (keyboard_check_pressed(vk_escape)){
 		if (!instance_exists(obj_transition)) {
-			// audio_play_sound(b_clicked,10,false)
+			audio_play_sound(b_clicked,10,false)
 	        room_goto(global.last_room)
 		}
 	}

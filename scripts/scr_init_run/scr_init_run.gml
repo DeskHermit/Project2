@@ -29,7 +29,7 @@ function scr_init_run() {
 		floor2cuboard2 : [obj_id_card_3D],
 		floor2cuboard3 : [obj_key_3D, obj_notes_3D],
 		floor3table2 : [obj_staff_3D],
-		floor3table3 : [obj_battery_3D,obj_chips_3D,obj_id_card_3D],
+		floor3table3 : [obj_battery_3D,obj_chips_3D],
 		floor3table4 : [obj_key_3D, obj_chips_3D],
 		floor3cuboard1 : [obj_battery_3D,obj_burger_3D],
 		floor3cuboard2 : [obj_battery_3D],
