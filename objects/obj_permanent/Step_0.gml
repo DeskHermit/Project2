@@ -129,6 +129,9 @@ if (!silent && !_music_valid) {
 // --------------------
 // Chase / silent / ambient music
 // --------------------
+if (keyboard_check_pressed(vk_f11))
+    window_set_fullscreen(!window_get_fullscreen())
+
 if (global.chasing) {
 	if (!audio_is_playing(snd_high_chase_bg_music)) {
 		audio_play_sound(snd_high_chase_bg_music, 100, true);
@@ -142,6 +145,14 @@ if (global.chasing) {
 		audio_sound_gain(current_music, 0, 1000);
 	}
 }
+    if (!audio_is_playing(snd_high_chase_bg_music)) {
+        audio_play_sound(snd_high_chase_bg_music, 100, true)
+        audio_sound_gain(snd_high_chase_bg_music, 0, 0)
+    }
+    
+    audio_sound_gain(snd_high_chase_bg_music, 0.4, 1000)
+    audio_sound_gain(current_music, 0, 1000)
+} 
 else if (silent) {
 	if (audio_is_playing(snd_high_chase_bg_music)) {
 		audio_sound_gain(snd_high_chase_bg_music, 0, 1000);

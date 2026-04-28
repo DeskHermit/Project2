@@ -17,6 +17,7 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
 	        global.inventory.items[_hammer_slot] = noone;
 	        is_unlocked = true;
 	        global.last_room = room;
+			room_persistent = false
 	        room_goto(rm_door_break);
 		}
 		else{ 

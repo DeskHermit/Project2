@@ -6,6 +6,7 @@ function scr_hit(hp){
 	}
 	wiz.h_time = 360; 
 	if (global.inventory.hp <= 0) {
+		room_persistent = false
 	    room_goto(rm_end_negative_screen);
 	}
 }

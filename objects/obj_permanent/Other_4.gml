@@ -92,17 +92,22 @@ switch (room) {
     break;
 }
 
-if (!array_contains(no_rooms, room) && !array_contains(table_rooms, room) && c_room == room) {
-    _wiz = instance_find(obj_wizard, 0);
-
-    if (instance_exists(_wiz)) {
-        _wiz.x = wiz_x;
-        _wiz.y = wiz_y;
-    }
+if ((!array_contains(no_rooms,room) && !array_contains(table_rooms,room)) && c_room==room) {
+	_wiz = instance_find(obj_wizard,0)
+	if (instance_exists(_wiz)){
+		if (wiz_x != noone)
+			_wiz.x=wiz_x
+		if (wiz_y != noone)
+			_wiz.y=wiz_y
+	}
 }
 
 if (room == rm_portal || room == rm_lift_scene || room == rm_steps || room == rm_door_break) {
     silent = true;
 } else {
-    silent = false;
+	silent = false
+}
+
+if (room == rm_tutorial || room == rm_floor1 || room == rm_floor2 || room == rm_floor3) {
+	room_persistent = true
 }

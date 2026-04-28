@@ -296,6 +296,7 @@
     {"roomId":{"name":"rm_lift_scene","path":"rooms/rm_lift_scene/rm_lift_scene.yy",},},
     {"roomId":{"name":"rm_floor3","path":"rooms/rm_floor3/rm_floor3.yy",},},
     {"roomId":{"name":"rm_end_negative_screen","path":"rooms/rm_end_negative_screen/rm_end_negative_screen.yy",},},
+    {"roomId":{"name":"rm_floor2","path":"rooms/rm_floor2/rm_floor2.yy",},},
     {"roomId":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
     {"roomId":{"name":"rm_steps","path":"rooms/rm_steps/rm_steps.yy",},},
     {"roomId":{"name":"rm_floor1","path":"rooms/rm_floor1/rm_floor1.yy",},},
@@ -309,7 +310,6 @@
     {"roomId":{"name":"rm_Instructions","path":"rooms/rm_Instructions/rm_Instructions.yy",},},
     {"roomId":{"name":"rm_portal","path":"rooms/rm_portal/rm_portal.yy",},},
     {"roomId":{"name":"rm_floor_cuboard","path":"rooms/rm_floor_cuboard/rm_floor_cuboard.yy",},},
-    {"roomId":{"name":"rm_floor2","path":"rooms/rm_floor2/rm_floor2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

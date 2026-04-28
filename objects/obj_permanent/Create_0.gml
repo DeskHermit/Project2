@@ -28,6 +28,8 @@ maxInvSlots = 5;
 global.first_time = true;
 _tutorial = true;
 
+window_set_fullscreen(true)
+
 no_rooms = [
 	rm_end_negative_screen,
 	rm_end_positive_screen,

@@ -15,6 +15,8 @@ if (position_meeting(_mx, _my, id)) {
     if (mouse_check_button_released(mb_left)) {
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
+			room_persistent = false
+			scr_init_run()
 	        room_goto(rm_title_screen)
 		}
     }
@@ -25,6 +27,8 @@ if (b_key!=noone){
 	if (keyboard_check_pressed(ord(b_key))){
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
+			room_persistent = false
+			scr_init_run()
 	        room_goto(rm_title_screen)
 		}
 	}

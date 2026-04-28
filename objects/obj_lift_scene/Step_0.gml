@@ -14,3 +14,6 @@ if (f==620){
 	audio_sound_gain(snd_elevator_bgm, .5, 1000)
 	audio_play_sound(snd_liftdoor,20,false)
 }
+if (f==700) {
+	room_goto(rm_floor2)
+}
