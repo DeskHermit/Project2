@@ -7,6 +7,7 @@ if (h_time<=0) {
 	if (global.inventory.hp<=0){
 		if (global.debug)
 			show_debug_message("hp < 0")
+		room_persistent = false
 		room_goto(rm_end_negative_screen);
 	}
 }

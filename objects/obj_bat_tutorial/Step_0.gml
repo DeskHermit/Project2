@@ -60,7 +60,10 @@ if (_wiz != noone) {
             audio_play_sound(snd_wizard_death_temp, 10, false);
             if (!global.inventory.hp_cheat) global.inventory.hp -= 10;
             _wiz.h_time = 360;
-            if (global.inventory.hp <= 0) room_goto(rm_end_negative_screen);
+            if (global.inventory.hp <= 0){
+				room_persistent = false
+				room_goto(rm_end_negative_screen);
+			}
         }
         
     } else if (is_returning) {
