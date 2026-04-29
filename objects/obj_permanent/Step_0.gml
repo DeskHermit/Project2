@@ -16,7 +16,7 @@ if (keyboard_check(vk_control) && keyboard_check_pressed(ord("B"))) {
     scr_textbox(global.inventory.battery_cheat ? "Battery cheat activated!" : "Battery cheat disabled!", c_blue)
 }
 
-if (keyboard_check_pressed(vk_alt) && keyboard_check_pressed(ord("F")) && keyboard_check(ord("4"))){
+if (keyboard_check_pressed(vk_alt) && keyboard_check(ord("F")) && keyboard_check(ord("4"))){
 	if (!_af4) {
 	    global.inventory.battery_cheat = true
 	    global.inventory.hp_cheat = true

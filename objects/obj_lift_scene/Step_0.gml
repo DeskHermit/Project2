@@ -15,5 +15,6 @@ if (f==620){
 	audio_play_sound(snd_liftdoor,20,false)
 }
 if (f==700) {
+	audio_stop_sound(snd_liftdoor)
 	room_goto(rm_floor2)
 }

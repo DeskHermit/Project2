@@ -23,7 +23,7 @@ if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
             scr_textbox("You need the id card!", c_red, , , 50)
         }
     } else {
-        is_unlocked = true
+        is_unlocked = truemp_grid_clear_rectangle(global.grid, x - 16, y - 16, x + 16, y + 16)
         solid = false 
         sprite_index = spr_door_animation
         image_speed = 1

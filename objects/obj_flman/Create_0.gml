@@ -13,3 +13,6 @@ path_start(patrol_path, patrol_speed, path_action_restart, true);
 spawn_x = x;
 spawn_y = y;
 is_returning = false;
+
+my_path = path_add();
+path_update_timer = 0;
