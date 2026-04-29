@@ -1,6 +1,6 @@
 global.debug = true;
 
-_af4 = false 
+_af4 = false;
 
 var _wiz = instance_find(obj_wizard, 0);
 
@@ -30,7 +30,7 @@ maxInvSlots = 5;
 global.first_time = true;
 _tutorial = true;
 
-window_set_fullscreen(true)
+window_set_fullscreen(true);
 
 no_rooms = [
 	rm_end_negative_screen,
@@ -40,7 +40,7 @@ no_rooms = [
 	rm_notes,
 	rm_portal,
 	rm_steps,
-	rm_lift_scene,
+	rm_lift_scene
 ];
 
 table_rooms = [
