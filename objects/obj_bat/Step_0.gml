@@ -68,7 +68,7 @@ if (_wiz != noone) {
             var _hurt_snd = audio_play_sound(snd_wizard_death_temp, 10, false);
 
             if (!global.inventory.hp_cheat) {
-                global.inventory.hp -= 30;
+                global.inventory.hp -= 15;
             }
 
             _wiz.h_time = 460;

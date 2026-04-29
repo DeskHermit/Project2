@@ -44,7 +44,7 @@ if (_wiz != noone) {
 
         if (_dist <= _damage_range && _wiz.h_time <= 0) {
             audio_play_sound(snd_wizard_death_temp, 10, false);
-            if (!global.inventory.hp_cheat) global.inventory.hp -= 50;
+            if (!global.inventory.hp_cheat) global.inventory.hp -= 30;
             _wiz.h_time = 560; 
             if (global.inventory.hp <= 0){
                 room_persistent = false;
