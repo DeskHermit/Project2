@@ -36,3 +36,9 @@ else {
         audio_sound_gain(portal_sound, 0, 500);
     }
 }
+var _contact = place_meeting(x, y, obj_wizard)
+
+if (_contact && global.inventory.staff) {
+room_goto(rm_portal)
+room_persistent = false
+}

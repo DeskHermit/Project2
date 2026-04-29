@@ -12,6 +12,7 @@ if (_contact) {
     if (_has_id) {
         if (room != rm_steps) {
 			if (keyboard_check(ord("E"))){
+				room_persistent = false
 				room_goto(rm_steps)
 			} else{ 
 				scr_textbox("Press E to climb!", c_green, , , 50)

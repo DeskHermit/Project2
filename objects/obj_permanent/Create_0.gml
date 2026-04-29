@@ -1,10 +1,11 @@
 global.debug = true;
 
-var _wiz = instance_find(obj_wizard, 0);
+_af4 = false 
 
-if (instance_exists(_wiz)) {
-	wiz_x = _wiz.x;
-	wiz_y = _wiz.y;
+_wiz = instance_find(obj_wizard,0)
+if (instance_exists(_wiz)){
+	wiz_x=_wiz.x
+	wiz_y=_wiz.y
 } else {
 	wiz_x = 1632;
 	wiz_y = 832;
@@ -27,6 +28,8 @@ maxInvSlots = 5;
 
 global.first_time = true;
 _tutorial = true;
+
+window_set_fullscreen(true)
 
 no_rooms = [
 	rm_end_negative_screen,
