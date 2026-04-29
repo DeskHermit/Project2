@@ -17,3 +17,7 @@ spatial_snd = snd_walking_croc;
 spawn_x = x;
 spawn_y = y;
 is_returning = false;
+
+my_path = path_add();
+path_update_timer = 0;
+saved_path_pos = 0;

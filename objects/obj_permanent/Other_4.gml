@@ -1,6 +1,4 @@
-// --------------------
-// Clear pause/transition leftovers
-// --------------------
+
 instance_activate_all();
 
 with (obj_pause_screen) {
@@ -24,9 +22,6 @@ with (obj_transition) {
 }
 
 
-// --------------------
-// Clean lift leftovers when arriving on Floor 2
-// --------------------
 if (room == rm_floor2 && global.from_lift_scene) {
 	global.from_lift_scene = false;
 
@@ -38,15 +33,12 @@ if (room == rm_floor2 && global.from_lift_scene) {
 }
 
 
-// --------------------
-// Room-specific startup
-// --------------------
 switch (room) {
     case rm_title_screen:
         scr_textbox("Welcome player", c_orange, 300, , 50, 300);
 
         if (global.first_time) {
-            scr_textbox("You can also press the first letter of buttons to press them", c_lime, , , 100, 300);
+            scr_textbox("You can also press the first letter of buttons to press them", c_lime, , , 150, 300);
         }
     break;
 
@@ -79,10 +71,6 @@ switch (room) {
     break;
 }
 
-
-// --------------------
-// Restore wizard position for returning to same room
-// --------------------
 if (!array_contains(no_rooms, room) && !array_contains(table_rooms, room) && c_room == room) {
 	var _wiz = instance_find(obj_wizard, 0);
 
@@ -98,27 +86,15 @@ if (!array_contains(no_rooms, room) && !array_contains(table_rooms, room) && c_r
 }
 
 
-// --------------------
-// Silent cutscene rooms
-// --------------------
 if (room == rm_portal || room == rm_lift_scene || room == rm_steps || room == rm_door_break) {
     silent = true;
 } else {
 	silent = false;
 }
 
-
-// --------------------
-// Persistent gameplay rooms
-// --------------------
 if (room == rm_tutorial || room == rm_floor1 || room == rm_floor2 || room == rm_floor3) {
 	room_persistent = true;
 }
-
-
-// --------------------
-// Rebuild pathfinding grid
-// --------------------
 if (variable_global_exists("grid")) {
 	if (global.grid != -1) {
 		mp_grid_destroy(global.grid);

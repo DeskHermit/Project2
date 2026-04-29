@@ -5,12 +5,14 @@ var _damage_range = 85;
 if (_wiz != noone) {
     var _dist = point_distance(x, y, _wiz.x, _wiz.y);
 
-    // --- TRIGGER CHASE ---
     if (!is_chasing && _dist <= detect_range) {
         is_chasing = true;
         is_returning = false;
+        
         spawn_x = x;
         spawn_y = y;
+        saved_path_pos = path_position; 
+        
         path_end();
     }
 
@@ -18,34 +20,28 @@ if (_wiz != noone) {
         global.chasing = true;
         var _dir_to_wiz = point_direction(x, y, _wiz.x, _wiz.y);
 
-        // --- GAP MAINTENANCE (Backing away SAFELY) ---
         if (_dist < _personal_space) {
-            path_end(); // Stop grid pathing while backing up
+            path_end();
             
             var _move_dir = point_direction(_wiz.x, _wiz.y, x, y);
             var _xspd = lengthdir_x(chase_speed, _move_dir);
             var _yspd = lengthdir_y(chase_speed, _move_dir);
             
-            // Use move_and_collide so he doesn't back into a solid wall!
             move_and_collide(_xspd, _yspd, [obj_collision, obj_door]);
-            
             image_angle = _dir_to_wiz - 90;
         } 
-        // --- NORMAL CHASE (Using Grid to avoid walls) ---
         else {
             path_update_timer--;
             if (path_update_timer <= 0) {
-                path_update_timer = 20; // Recalculate path every 20 frames
+                path_update_timer = 15;
                 
-                // Find path around walls to the wizard
                 if (mp_grid_path(global.grid, my_path, x, y, _wiz.x, _wiz.y, true)) {
-                    path_start(my_path, chase_speed, path_action_stop, false);
+                    path_start(my_path, chase_speed, path_action_stop, true);
                 }
             }
             image_angle = _dir_to_wiz - 90;
         }
 
-        // --- DAMAGE LOGIC ---
         if (_dist <= _damage_range && _wiz.h_time <= 0) {
             audio_play_sound(snd_wizard_death_temp, 10, false);
             if (!global.inventory.hp_cheat) global.inventory.hp -= 50;
@@ -56,38 +52,32 @@ if (_wiz != noone) {
             }
         }
 
-        // --- LOSE PLAYER ---
         if (_dist >= lose_range) {
-            // REMOVED 'global.chasing = true' from here.
             is_chasing = false;
             is_returning = true;
             path_end();
         }
     } 
-    // --- RETURN TO SPAWN (Using Grid to avoid walls) ---
     else if (is_returning) {
         path_update_timer--;
         if (path_update_timer <= 0) {
             path_update_timer = 20;
-            
-            // Find path around walls to get back to spawn
             if (mp_grid_path(global.grid, my_path, x, y, spawn_x, spawn_y, true)) {
-                path_start(my_path, chase_speed, path_action_stop, false);
+                path_start(my_path, chase_speed, path_action_stop, true);
             }
         }
         
-        // Face the direction of the path
         if (path_speed > 0) image_angle = direction - 90;
         
-        // 10 pixel tolerance to account for grid snapping
         if (point_distance(x, y, spawn_x, spawn_y) < 10) {
             is_returning = false;
             path_end();
-            path_start(patrol_path, patrol_speed, path_action_restart, false);
+            
+            path_start(patrol_path, patrol_speed, path_action_restart, true);
+            path_position = saved_path_pos; 
         }
     }
-    // --- STANDARD PATROL ---
     else {
-        image_angle = direction - 90;
+        if (path_speed > 0) image_angle = direction - 90;
     }
 }

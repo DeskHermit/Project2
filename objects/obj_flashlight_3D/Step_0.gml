@@ -9,7 +9,7 @@ if (_hover) {
         global.inventory.torch = true;
         
         scr_textbox("Torch acquired! Toggle F and aim your light.", c_lime, , , 50, 300,,true);
-        scr_textbox("Careful: The light scares bats but drains your battery! Use battery to refill the bar", c_lime, , , 100, 300,,true);
+        scr_textbox("Careful: The light scares bats but drains your battery! Use battery to refill the bar", c_lime, , , 150, 300,,true);
         
         instance_destroy();
     }
