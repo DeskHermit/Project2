@@ -6,6 +6,7 @@ if (mouse_check_button_pressed(mb_left)) {
             if (global.inventory.items[i] == noone) {
                 var _obj_type = _target.object_index;
                 global.inventory.items[i] = _obj_type;
+				audio_play_sound(snd_pickup_item2,31,false)
                 var _list = global.storage[$ global.store_id];
                 if (!is_undefined(_list)) {
                     var _idx = -1;

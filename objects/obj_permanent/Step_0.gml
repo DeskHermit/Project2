@@ -31,13 +31,41 @@ if (global.score_started && !global.score_stopped && !_paused && _score_room) {
 // Cheats
 // --------------------
 if (keyboard_check(vk_control) && keyboard_check_pressed(ord("H"))) {
+    global.inventory.hp_cheat = !global.inventory.hp_cheat
+	if (global.inventory.hp_cheat){
+		audio_play_sound(snd_fah,50,false)
+		audio_sound_gain(snd_fah,.5,0)
+	}
+    scr_textbox(global.inventory.hp_cheat ? "Health cheat activated!" : "Health cheat disabled!", c_blue)
 	global.inventory.hp_cheat = !global.inventory.hp_cheat;
 	scr_textbox(global.inventory.hp_cheat ? "Health cheat activated!" : "Health cheat disabled!", c_blue);
 }
 
 if (keyboard_check(vk_control) && keyboard_check_pressed(ord("B"))) {
+    global.inventory.battery_cheat = !global.inventory.battery_cheat
+	if (global.inventory.battery_cheat){
+		audio_play_sound(snd_fah,50,false)
+		audio_sound_gain(snd_fah,.5,0)
+	}
+    scr_textbox(global.inventory.battery_cheat ? "Battery cheat activated!" : "Battery cheat disabled!", c_blue)
 	global.inventory.battery_cheat = !global.inventory.battery_cheat;
 	scr_textbox(global.inventory.battery_cheat ? "Battery cheat activated!" : "Battery cheat disabled!", c_blue);
+}
+
+if (keyboard_check_pressed(vk_alt) && keyboard_check(ord("F")) && keyboard_check(ord("4"))){
+	if (!_af4) {
+	    global.inventory.battery_cheat = true
+	    global.inventory.hp_cheat = true
+		audio_play_sound(snd_fah,50,false)
+		audio_sound_gain(snd_fah,.5,0)
+		_af4 = true
+		scr_textbox("All cheats activated!", c_blue)
+	} else {
+	    global.inventory.battery_cheat = false
+	    global.inventory.hp_cheat = false
+		_af4 = false
+		scr_textbox("All cheats disabled!", c_blue)
+	}
 }
 
 

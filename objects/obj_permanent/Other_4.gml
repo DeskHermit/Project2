@@ -111,3 +111,18 @@ if (room == rm_portal || room == rm_lift_scene || room == rm_steps || room == rm
 if (room == rm_tutorial || room == rm_floor1 || room == rm_floor2 || room == rm_floor3) {
 	room_persistent = true
 }
+
+
+if (variable_global_exists("grid")) {
+    mp_grid_destroy(global.grid)
+}
+
+// 2. Create a fresh grid for the current room's size
+var _cell_size = 32
+var _w = ceil(room_width / _cell_size)
+var _h = ceil(room_height / _cell_size)
+global.grid = mp_grid_create(0, 0, _w, _h, _cell_size, _cell_size)
+
+// 3. Scan the new room for walls and doors
+mp_grid_add_instances(global.grid, obj_collision, false)
+mp_grid_add_instances(global.grid, obj_door, false)

@@ -17,6 +17,7 @@ if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
 			audio_play_sound(snd_door_open,20,false)
             is_unlocked = true
             solid = false 
+			mp_grid_clear_rectangle(global.grid, x - 16, y - 16, x + 16, y + 16)
             sprite_index = spr_door_animation
             image_speed = 1
         } else {
@@ -26,6 +27,7 @@ if ((_contact || _contact1) && keyboard_check_pressed(ord("E"))) {
 		audio_play_sound(snd_door_open,20,false)
         is_unlocked = true 
 		solid = false
+		mp_grid_clear_rectangle(global.grid, x - 16, y - 16, x + 16, y + 16)
         sprite_index = spr_door_animation
         image_speed = 1
     }
