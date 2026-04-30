@@ -27,7 +27,7 @@ if (_wiz != noone) {
             var _xspd = lengthdir_x(chase_speed, _move_dir);
             var _yspd = lengthdir_y(chase_speed, _move_dir);
             
-            move_and_collide(_xspd, _yspd, [obj_collision, obj_door]);
+            move_and_collide(_xspd, _yspd, [obj_collision]);
             image_angle = _dir_to_wiz - 90;
         } 
         else {

@@ -25,7 +25,7 @@ if (keyboard_check_pressed(vk_f11)) {
 	window_set_fullscreen(!window_get_fullscreen());
 }
 
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("H"))) {
+if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("H"))) {
 	global.inventory.hp_cheat = !global.inventory.hp_cheat;
 
 	if (global.inventory.hp_cheat) {
@@ -39,8 +39,9 @@ if (keyboard_check(vk_control) && keyboard_check_pressed(ord("H"))) {
 	scr_textbox(global.inventory.hp_cheat ? "Health cheat activated!" : "Health cheat disabled!", c_blue);
 }
 
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("B"))) {
+if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("B"))) {
 	global.inventory.battery_cheat = !global.inventory.battery_cheat;
+	global.inventory.torch = true
 
 	if (global.inventory.battery_cheat) {
 		var _snd = audio_play_sound(snd_fah, 50, false);
@@ -57,7 +58,8 @@ if (keyboard_check(vk_control) && keyboard_check_pressed(ord("B"))) {
 if (keyboard_check(vk_alt) && keyboard_check(ord("F")) && keyboard_check_pressed(ord("4"))) {
 	if (!_af4) {
 		global.inventory.battery_cheat = true;
-		global.inventory.hp_cheat = true;
+		global.inventory.hp_cheat = true;	
+		global.inventory.torch = true
 
 		var _snd = audio_play_sound(snd_fah, 50, false);
 
