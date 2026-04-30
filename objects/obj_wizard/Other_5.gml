@@ -1,3 +1,5 @@
-global.inventory.battery = battery
-if(audio_is_playing(snd_walking))
-	audio_stop_sound(snd_walking)
+global.inventory.battery = battery;
+
+if (audio_is_playing(walk_snd)) {
+    audio_stop_sound(walk_snd);
+}

@@ -23,6 +23,8 @@ music_state = "playing";
 current_music = -1;
 current_music = audio_play_sound(snd_horror, 10, true);
 
+chase_music = -1;
+
 music_vol = 1;
 
 maxInvSlots = 5;

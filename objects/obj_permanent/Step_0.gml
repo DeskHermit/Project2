@@ -178,16 +178,16 @@ if (!silent && !_music_valid) {
 // Chase / silent / ambient music
 // --------------------
 if (global.chasing) {
-	if (!audio_is_playing(snd_high_chase_bg_music)) {
-		var _chase_snd = audio_play_sound(snd_high_chase_bg_music, 100, true);
+	if (!audio_is_playing(chase_music)) {
+		chase_music = audio_play_sound(snd_high_chase_bg_music, 100, true);
 
-		if (audio_is_playing(_chase_snd)) {
-			audio_sound_gain(_chase_snd, 0, 0);
+		if (audio_is_playing(chase_music)) {
+			audio_sound_gain(chase_music, 0, 0);
 		}
 	}
 
-	if (audio_is_playing(snd_high_chase_bg_music)) {
-		audio_sound_gain(snd_high_chase_bg_music, 0.4, 1000);
+	if (audio_is_playing(chase_music)) {
+		audio_sound_gain(chase_music, 0.45, 1000);
 	}
 
 	if (_music_valid) {
@@ -195,8 +195,8 @@ if (global.chasing) {
 	}
 }
 else if (silent) {
-	if (audio_is_playing(snd_high_chase_bg_music)) {
-		audio_sound_gain(snd_high_chase_bg_music, 0, 1000);
+	if (audio_is_playing(chase_music)) {
+		audio_sound_gain(chase_music, 0, 1000);
 	}
 
 	if (_music_valid) {
@@ -204,8 +204,8 @@ else if (silent) {
 	}
 }
 else {
-	if (audio_is_playing(snd_high_chase_bg_music)) {
-		audio_sound_gain(snd_high_chase_bg_music, 0, 1000);
+	if (audio_is_playing(chase_music)) {
+		audio_sound_gain(chase_music, 0, 1000);
 	}
 
 	if (_music_valid) {
@@ -232,7 +232,6 @@ else {
 
 			case "silent":
 				music_timer--;
-
 				audio_sound_gain(current_music, 0, 1000);
 
 				if (music_timer <= 0) {

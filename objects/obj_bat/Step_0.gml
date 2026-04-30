@@ -1,9 +1,63 @@
+// ----------------------------------------------------
+// Do not run bat behavior/audio in paused or special rooms
+// ----------------------------------------------------
+var _paused = false;
+
+if (instance_exists(obj_pause_screen)) {
+    _paused = obj_pause_screen.is_paused;
+}
+
+var _bad_room = false;
+
+if (instance_exists(obj_permanent)) {
+    if (array_contains(obj_permanent.no_rooms, room)) {
+        _bad_room = true;
+    }
+
+    if (array_contains(obj_permanent.table_rooms, room)) {
+        _bad_room = true;
+    }
+}
+
+if (_paused || _bad_room) {
+    speed = 0;
+
+    if (audio_is_playing(last_chirp_snd)) {
+        audio_stop_sound(last_chirp_snd);
+    }
+
+    exit;
+}
+
+
+// ----------------------------------------------------
+// Cut off long chirp sound for easier debugging
+// ----------------------------------------------------
+if (chirp_cut_timer > 0) {
+    chirp_cut_timer--;
+
+    if (chirp_cut_timer <= 0) {
+        if (audio_is_playing(last_chirp_snd)) {
+            audio_stop_sound(last_chirp_snd);
+        }
+    }
+}
+
+
+// ----------------------------------------------------
+// Find wizard
+// ----------------------------------------------------
 var _wiz = instance_nearest(x, y, obj_wizard);
+
 var _personal_space = 70;
 var _damage_range = 85;
 
 visible_in_light = false;
 
+
+// ----------------------------------------------------
+// Flashlight visibility check
+// ----------------------------------------------------
 if (_wiz != noone) {
     var _dist_to_p = point_distance(x, y, _wiz.x, _wiz.y);
 
@@ -21,6 +75,10 @@ if (_wiz != noone) {
     }
 }
 
+
+// ----------------------------------------------------
+// Seen timer
+// ----------------------------------------------------
 if (visible_in_light) {
     seen_timer = seen_time_max;
 }
@@ -28,14 +86,20 @@ else if (seen_timer > 0) {
     seen_timer--;
 }
 
+
+// ----------------------------------------------------
+// Chase / repel / return / patrol logic
+// ----------------------------------------------------
 if (_wiz != noone) {
     var _dist = point_distance(x, y, _wiz.x, _wiz.y);
 
-    if (!is_chasing && _dist <= detect_range) {
+    if (!is_chasing && !is_returning && _dist <= detect_range) {
         is_chasing = true;
         is_returning = false;
+
         spawn_x = x;
         spawn_y = y;
+
         path_end();
     }
 
@@ -44,19 +108,30 @@ if (_wiz != noone) {
 
         var _dir_to_wiz = point_direction(x, y, _wiz.x, _wiz.y);
 
-        if (_dist < _personal_space) {
-            var _move_dir = point_direction(_wiz.x, _wiz.y, x, y);
+        if (visible_in_light && _wiz.flashlight_on) {
+            var _repel_dir = point_direction(_wiz.x, _wiz.y, x, y);
 
-            x += lengthdir_x(chase_speed, _move_dir);
-            y += lengthdir_y(chase_speed, _move_dir);
+            x += lengthdir_x(repel_speed, _repel_dir);
+            y += lengthdir_y(repel_speed, _repel_dir);
 
             speed = 0;
-            image_angle = _dir_to_wiz - 90;
+            image_angle = _repel_dir - 90;
+
+            if (_dist >= light_lose_range) {
+                global.chasing = false;
+                is_chasing = false;
+                is_returning = true;
+            }
         }
         else {
-            if (visible_in_light) {
-                move_towards_point(_wiz.x, _wiz.y, -chase_speed);
-                image_angle = _dir_to_wiz + 90;
+            if (_dist < _personal_space) {
+                var _move_dir = point_direction(_wiz.x, _wiz.y, x, y);
+
+                x += lengthdir_x(chase_speed, _move_dir);
+                y += lengthdir_y(chase_speed, _move_dir);
+
+                speed = 0;
+                image_angle = _dir_to_wiz - 90;
             }
             else {
                 move_towards_point(_wiz.x, _wiz.y, chase_speed);
@@ -64,8 +139,8 @@ if (_wiz != noone) {
             }
         }
 
-        if (_dist <= _damage_range && _wiz.h_time <= 0) {
-            var _hurt_snd = audio_play_sound(snd_wizard_death_temp, 10, false);
+        if (!visible_in_light && _dist <= _damage_range && _wiz.h_time <= 0) {
+            audio_play_sound(snd_wizard_death_temp, 10, false);
 
             if (!global.inventory.hp_cheat) {
                 global.inventory.hp -= 15;
@@ -99,24 +174,35 @@ if (_wiz != noone) {
     }
 }
 
+
+// ----------------------------------------------------
+// Spatial bat squeak
+// ----------------------------------------------------
 squeak_timer--;
 
 if (squeak_timer <= 0) {
     if (_wiz != noone) {
-        var _snd = audio_play_sound_at(
+        audio_emitter_position(bat_emitter, x, y, 0);
+
+        last_chirp_snd = audio_play_sound_on(
+            bat_emitter,
             snd_bat_chirp,
-            x,
-            y,
-            0,
-            100,
-            300,
-            1,
             false,
             10
         );
 
-        if (audio_is_playing(_snd)) {
-            audio_sound_pitch(_snd, random_range(0.7, 0.9));
+        if (audio_is_playing(last_chirp_snd)) {
+            var _dist_to_wiz = point_distance(x, y, _wiz.x, _wiz.y);
+
+            // Louder when close, quieter when far.
+            // This is intentionally boosted so close bats are more noticeable.
+            var _vol = 1 - clamp((_dist_to_wiz - 40) / 660, 0, 1);
+            _vol = clamp(_vol * 1.6, 0.25, 1.6);
+
+            audio_sound_pitch(last_chirp_snd, random_range(0.7, 0.9));
+            audio_sound_gain(last_chirp_snd, _vol, 0);
+
+            chirp_cut_timer = chirp_cut_time;
         }
 
         var _min = is_chasing ? squeak_min * 0.5 : squeak_min;
