@@ -20,5 +20,5 @@ function scr_show_leaderboard() {
     global.heading = "Leaderboard";
     global.content = _content;
 
-    room_goto(rm_notes);
+    room_goto(rm_notes_leaderboard);
 }
