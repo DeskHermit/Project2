@@ -15,9 +15,9 @@ if (global.inventory.staff) {
 
     if (_contact) {
         global.score_stopped = true;
-        global.final_score = floor(global.score);
+		global.final_score = floor(global.score);
 
-        scr_add_score_to_leaderboard(global.final_score);
+		scr_add_score_to_leaderboard(global.final_score, global.run_time_frames);
 
         global.chasing = false;
 

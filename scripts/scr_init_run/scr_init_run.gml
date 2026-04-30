@@ -7,6 +7,8 @@ function scr_init_run() {
 		hp_cheat: false,
 		battery_cheat: false,
 	};
+	
+	global.door_cheat = false;
 
 	global.last_room = -1;
 	global.first_time = true;
@@ -19,6 +21,8 @@ function scr_init_run() {
 	global.score_started = false;
 	global.score_stopped = false;
 	global.final_score = 0;
+	
+	global.run_time_frames = 0;
 	
 	global.from_lift_scene = false;
 

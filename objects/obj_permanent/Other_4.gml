@@ -73,6 +73,9 @@ switch (room) {
             audio_play_sound(snd_airvents, 30, true);
         }
     break;
+	case rm_notes_leaderboard:
+	    scr_load_leaderboard();
+	break;
 }
 
 if (!array_contains(no_rooms, room) && !array_contains(table_rooms, room) && c_room == room) {

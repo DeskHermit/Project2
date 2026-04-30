@@ -17,6 +17,8 @@ if (array_contains(table_rooms, room)) {
 if (global.score_started && !global.score_stopped && !_paused && _score_room) {
 	global.score -= global.score_loss_per_second / room_speed;
 	global.score = max(global.score, 0);
+
+	global.run_time_frames += 1;
 }
 
 if (keyboard_check_pressed(vk_f11)) {
@@ -74,7 +76,6 @@ if (keyboard_check(vk_alt) && keyboard_check(ord("F")) && keyboard_check_pressed
 	}
 }
 
-
 var _jump_room = noone;
 
 if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("T"))) {
@@ -95,6 +96,11 @@ if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("2"))) {
 if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("3"))) {
 	show_debug_message("CHEAT: force floor 3");
 	_jump_room = rm_floor3;
+}
+
+if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("L"))) {
+    scr_debug_fill_leaderboard();
+    scr_textbox("Debug leaderboard scores added!", c_lime);
 }
 
 if (_jump_room != noone) {

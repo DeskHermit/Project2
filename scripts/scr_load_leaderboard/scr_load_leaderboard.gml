@@ -10,4 +10,17 @@ function scr_load_leaderboard() {
             global.leaderboard = json_parse(_json);
         }
     }
+
+    for (var i = 0; i < array_length(global.leaderboard); i++) {
+        if (!is_struct(global.leaderboard[i])) {
+            global.leaderboard[i] = {
+                score: floor(global.leaderboard[i]),
+                time_frames: 0
+            };
+        }
+    }
+
+    array_sort(global.leaderboard, function(_a, _b) {
+        return _b.score - _a.score;
+    });
 }

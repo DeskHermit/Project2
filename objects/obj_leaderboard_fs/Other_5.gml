@@ -1,1 +1,1 @@
-audio_stop_sound(snd_paper_rustling)
+//audio_stop_sound(snd_paper_rustling)
