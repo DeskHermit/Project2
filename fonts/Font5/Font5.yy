@@ -191,8 +191,8 @@
   "maintainGms1Font":false,
   "name":"Font5",
   "parent":{
-    "name":"sounds",
-    "path":"folders/sounds.yy",
+    "name":"fonts",
+    "path":"folders/fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

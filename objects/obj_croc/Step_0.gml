@@ -43,9 +43,10 @@ if (_wiz != noone) {
         }
 
         if (_dist <= _damage_range && _wiz.h_time <= 0) {
+			audio_play_sound(snd_croc_bite,20,false)
             audio_play_sound(snd_wizard_death_temp, 10, false);
             if (!global.inventory.hp_cheat) global.inventory.hp -= 30;
-            _wiz.h_time = 560; 
+            _wiz.h_time = 460; 
             if (global.inventory.hp <= 0){
                 room_persistent = false;
                 room_goto(rm_end_negative_screen);
@@ -80,4 +81,16 @@ if (_wiz != noone) {
     else {
         if (path_speed > 0) image_angle = direction - 90;
     }
+}
+
+if (x != xprevious || y != yprevious) {
+    step_timer--;
+    
+    if (step_timer <= 0) {
+        var _snd = audio_play_sound_at(snd_walking_croc, x, y, 0, 300, 1200, 1, false, 5);
+        audio_sound_pitch(_snd, random_range(0.8, 1.1));
+        step_timer = is_chasing ? 20 : 35; 
+    }
+} else {
+	step_timer = 0; 
 }

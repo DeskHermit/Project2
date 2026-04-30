@@ -130,8 +130,13 @@ if (_wiz != noone) {
                 x += lengthdir_x(chase_speed, _move_dir);
                 y += lengthdir_y(chase_speed, _move_dir);
 
-                speed = 0;
-                image_angle = _dir_to_wiz - 90;
+            speed = 0;
+            image_angle = _dir_to_wiz - 90;
+        }
+        else {
+            if (visible_in_light) {
+                move_towards_point(_wiz.x, _wiz.y, -chase_speed);
+                image_angle = _dir_to_wiz + 120;
             }
             else {
                 move_towards_point(_wiz.x, _wiz.y, chase_speed);

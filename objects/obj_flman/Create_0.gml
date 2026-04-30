@@ -16,3 +16,5 @@ is_returning = false;
 
 my_path = path_add();
 path_update_timer = 0;
+
+step_timer = 0;

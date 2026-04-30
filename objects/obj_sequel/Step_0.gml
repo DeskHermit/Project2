@@ -15,20 +15,17 @@ if (position_meeting(_mx, _my, id)) {
     if (mouse_check_button_released(mb_left)) {
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
-			global.heading = "Instructions"
-			global.content = ["Press wsad or arrow keys to control the character","USe mouse to click item to pickup use and drop items","Press E when E shows up when you are near an interactable objects such as table","Press F to toggle flashlight after obtaining flashlight","Bat fly, croc ghost, man magic man, please no"]
-			room_goto(rm_notes_video)
+			url_open("https://abishektony.itch.io/mod");
 		}
     }
 } else {
     image_index = 0
 }
-
 if (b_key!=noone){
 	if (keyboard_check_pressed(ord(b_key))){
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
-	        scr_fade(b_room)
+			url_open("https://abishektony.itch.io/mod");
 		}
 	}
 }
