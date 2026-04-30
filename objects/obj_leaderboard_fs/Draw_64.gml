@@ -36,7 +36,7 @@ var _count = array_length(global.leaderboard);
 
 if (_count <= 0) {
     draw_set_halign(fa_center);
-    draw_text(540, _start_y, "No scores recorded yet.");
+    draw_text(780, _start_y, "No scores recorded yet.");
 }
 else {
     var _first = floor(scroll_y / row_h);
