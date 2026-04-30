@@ -40,7 +40,8 @@ no_rooms = [
 	rm_notes,
 	rm_portal,
 	rm_steps,
-	rm_lift_scene
+	rm_lift_scene,
+	rm_notes_video
 ];
 
 table_rooms = [

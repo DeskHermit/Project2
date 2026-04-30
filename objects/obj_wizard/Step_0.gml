@@ -60,7 +60,7 @@ if (keyboard_check_pressed(ord("F")) && global.inventory.torch) {
 
 // Flashlight toggle cheat (Shift + F)
 if (keyboard_check_pressed(ord("F")) 
-    && keyboard_check(vk_shift)) 
+    && keyboard_check(vk_alt)) 
 {
     flashlight_on = !flashlight_on;
 } 

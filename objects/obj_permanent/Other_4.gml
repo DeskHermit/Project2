@@ -64,6 +64,10 @@ switch (room) {
         scr_note(global.heading, global.content);
     break;
 
+    case rm_notes_video:
+        scr_note(global.heading, global.content);
+    break;
+	
     case rm_floor1:
         if (!audio_is_playing(snd_airvents)) {
             audio_play_sound(snd_airvents, 30, true);

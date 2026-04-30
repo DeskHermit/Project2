@@ -56,7 +56,7 @@ if (_wiz != noone) {
         else {
             if (visible_in_light) {
                 move_towards_point(_wiz.x, _wiz.y, -chase_speed);
-                image_angle = _dir_to_wiz + 90;
+                image_angle = _dir_to_wiz + 120;
             }
             else {
                 move_towards_point(_wiz.x, _wiz.y, chase_speed);

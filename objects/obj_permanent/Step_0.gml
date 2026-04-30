@@ -1,16 +1,9 @@
-// --------------------
-// Pause check
-// --------------------
 var _paused = false;
 
 if (instance_exists(obj_pause_screen)) {
 	_paused = obj_pause_screen.is_paused;
 }
 
-
-// --------------------
-// Score countdown
-// --------------------
 var _score_room = true;
 
 if (array_contains(no_rooms, room)) {
@@ -26,18 +19,10 @@ if (global.score_started && !global.score_stopped && !_paused && _score_room) {
 	global.score = max(global.score, 0);
 }
 
-
-// --------------------
-// Fullscreen toggle
-// --------------------
 if (keyboard_check_pressed(vk_f11)) {
 	window_set_fullscreen(!window_get_fullscreen());
 }
 
-
-// --------------------
-// Cheats
-// --------------------
 if (keyboard_check(vk_control) && keyboard_check_pressed(ord("H"))) {
 	global.inventory.hp_cheat = !global.inventory.hp_cheat;
 
@@ -67,7 +52,6 @@ if (keyboard_check(vk_control) && keyboard_check_pressed(ord("B"))) {
 }
 
 
-// Alt + F + 4 all-cheats toggle
 if (keyboard_check(vk_alt) && keyboard_check(ord("F")) && keyboard_check_pressed(ord("4"))) {
 	if (!_af4) {
 		global.inventory.battery_cheat = true;
@@ -91,27 +75,24 @@ if (keyboard_check(vk_alt) && keyboard_check(ord("F")) && keyboard_check_pressed
 }
 
 
-// --------------------
-// Room jump cheat
-// --------------------
 var _jump_room = noone;
 
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("T"))) {
+if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("T"))) {
 	show_debug_message("CHEAT: force tutorial");
 	_jump_room = rm_tutorial;
 }
 
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("1"))) {
+if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("1"))) {
 	show_debug_message("CHEAT: force floor 1");
 	_jump_room = rm_floor1;
 }
 
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("2"))) {
+if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("2"))) {
 	show_debug_message("CHEAT: force floor 2");
 	_jump_room = rm_floor2;
 }
 
-if (keyboard_check(vk_control) && keyboard_check_pressed(ord("3"))) {
+if (keyboard_check(vk_alt) && keyboard_check_pressed(ord("3"))) {
 	show_debug_message("CHEAT: force floor 3");
 	_jump_room = rm_floor3;
 }
@@ -152,11 +133,6 @@ if (_jump_room != noone) {
 }
 
 
-// --------------------
-// Music safety
-// --------------------
-// Do not call audio_sound_gain(current_music, ...) unless current_music is confirmed playing.
-
 var _music_valid = false;
 
 if (is_real(current_music)) {
@@ -173,10 +149,6 @@ if (!silent && !_music_valid) {
 	}
 }
 
-
-// --------------------
-// Chase / silent / ambient music
-// --------------------
 if (global.chasing) {
 	if (!audio_is_playing(snd_high_chase_bg_music)) {
 		var _chase_snd = audio_play_sound(snd_high_chase_bg_music, 100, true);
