@@ -1,11 +1,21 @@
 var _wiz = instance_nearest(x, y, obj_wizard);
-var _personal_space = 70;
 var _damage_range = 85;
 
 visible_in_light = false;
+repelled_by_light = false;
 
 if (_wiz != noone) {
-	visible_in_light = scr_bat_in_flashlight(_wiz, x, y);
+	var _dist_to_wiz = point_distance(x, y, _wiz.x, _wiz.y);
+
+
+	if (_dist_to_wiz <= 60) {
+		visible_in_light = true;
+	}
+
+	if (scr_bat_in_flashlight(_wiz, x, y)) {
+		visible_in_light = true;
+		repelled_by_light = true;
+	}
 }
 
 if (visible_in_light) {
@@ -31,7 +41,7 @@ if (_wiz != noone) {
 
 		var _dir_to_wiz = point_direction(x, y, _wiz.x, _wiz.y);
 
-		if (visible_in_light) {
+		if (repelled_by_light) {
 			var _move_dir = point_direction(_wiz.x, _wiz.y, x, y);
 
 			var _flee_speed = chase_speed * 1.35;
@@ -44,24 +54,25 @@ if (_wiz != noone) {
 			image_angle = _dir_to_wiz + 120;
 		}
 		else {
-			if (_dist < _personal_space) {
-				var _move_dir = point_direction(_wiz.x, _wiz.y, x, y);
+			move_towards_point(_wiz.x, _wiz.y, chase_speed);
+			image_angle = _dir_to_wiz - 90;
+		}
 
-				var _xspd = lengthdir_x(chase_speed, _move_dir);
-				var _yspd = lengthdir_y(chase_speed, _move_dir);
+		if (!repelled_by_light) {
+			var _touch_range = 42;
 
-				move_and_collide(_xspd, _yspd, [obj_collision, obj_door]);
+			if (_dist < _touch_range) {
+				var _push_dir = point_direction(_wiz.x, _wiz.y, x, y);
+				var _push_amount = (_touch_range - _dist) * 0.18;
 
-				speed = 0;
-				image_angle = _dir_to_wiz - 90;
-			}
-			else {
-				move_towards_point(_wiz.x, _wiz.y, chase_speed);
-				image_angle = _dir_to_wiz - 90;
+				var _xpush = lengthdir_x(_push_amount, _push_dir);
+				var _ypush = lengthdir_y(_push_amount, _push_dir);
+
+				move_and_collide(_xpush, _ypush, [obj_collision, obj_door]);
 			}
 		}
 
-		if (!visible_in_light && _dist <= _damage_range && _wiz.h_time <= 0) {
+		if (!repelled_by_light && _dist <= _damage_range && _wiz.h_time <= 0) {
 			audio_play_sound(snd_wizard_death_temp, 10, false);
 
 			if (!global.inventory.hp_cheat) {
