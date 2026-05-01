@@ -91,6 +91,10 @@ switch (room) {
         if (!audio_is_playing(snd_airvents)) {
             audio_play_sound(snd_airvents, 30, true);
         }
+		global.inventory.hp = 100
+		global.inventory.battery = 100
+		_wizy = instance_find(obj_wizard,0)
+		_wizy.battery = 100
     break;
 	
 	case rm_floor2:

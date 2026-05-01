@@ -68,8 +68,8 @@ function scr_init_run() {
 		outsidetable2 : [
 			"Note",
 			"The Chancellor has sealed the Union.",
-			"They say he took the wizard’s staff himself and carried it to the upper floors, where no student dares to go after dark.",
-			"Without the staff, the wizard’s magic is weak. If he wants it back, he will have to enter the Union and climb floor by floor."
+			"They say he took the wizard's staff himself and carried it to the upper floors, where no student dares to go after dark.",
+			"Without the staff, the wizard's magic is weak. If he wants it back, he will have to enter the Union and climb floor by floor."
 		],
 
 		floor1table2 : [
@@ -98,13 +98,13 @@ function scr_init_run() {
 		floor2table2 : [
 			"Security Memo",
 			"Reports of an unknown man wandering the top floor after closing have increased.",
-			"He does not appear on the cameras for long. He moves between rooms, knocks things over, and talks to himself about 'protecting the Chancellor’s prize.'",
+			"He does not appear on the cameras for long. He moves between rooms, knocks things over, and talks to himself about 'protecting the Chancellor's prize.'",
 			"Do not approach him. Do not argue with him. Leave the area immediately. He does not seem the type to chat"
 		],
 
 		floor2cuboard3 : [
 			"Faculty Memo",
-			"The Chancellor believes the wizard’s staff is the only thing strong enough to restore order to the Union.",
+			"The Chancellor believes the wizard's staff is the only thing strong enough to restore order to the Union.",
 			"He says the building has become too chaotic, too unpredictable, and too difficult to control. With the staff, he thinks he can force every hallway, room, and creature inside to obey him.",
 			"But power taken by fear does not fix anything. It only makes the nightmare worse."
 		],
