@@ -49,7 +49,7 @@ switch (room) {
 
     case rm_tutorial:
         if (global.first_time && rooms._tutorial) {	
-            scr_textbox("It is dark! Find the table and acquire the flashlight!", c_lime, , , 50, 300, , true);
+            scr_textbox("It is dark! Find the table and acquire the flashlight! Press space to close.", c_lime, , , 150, 300, , true);
             scr_textbox("Use WASD to move around. Press space to close.", c_yellow, , , , 300, , true);
             rooms._tutorial = false;
         }
@@ -75,7 +75,7 @@ switch (room) {
 	
     case rm_floor1:
 		if (global.first_time && rooms._floor1) {	
-            scr_textbox("The steps are blocked! Try to fix the lift to go to next floor!", c_lime, , , 50, 300, , true);
+            scr_textbox("The steps are blocked! Try to fix the lift to go to next floor! Press space to close.", c_lime, , , 150, 300, , true);
 			rooms._floor1 = false
 		}
         if (!audio_is_playing(snd_airvents)) {
@@ -85,7 +85,7 @@ switch (room) {
 	
 	case rm_floor2:
 		if (global.first_time && rooms._floor2) {	
-            scr_textbox("The id card is here somewhere. Find it and go tothe next floor", c_lime, , , 50, 300, , true);
+            scr_textbox("The id card is here somewhere. Find it and go tothe next floor. Press space to close.", c_lime, , , 150, 300, , true);
 			rooms._floor2 = false
 		}
         if (!audio_is_playing(snd_airvents)) {
@@ -95,7 +95,7 @@ switch (room) {
 	
 	case rm_floor3:
 		if (global.first_time && rooms._floor3) {	
-            scr_textbox("The staff is somewhere here. But do not get caught by the Florida Man!", c_lime, , , 50, 300, , true);
+            scr_textbox("The staff is somewhere here. But do not get caught by the Florida Man! Press space to close.", c_lime, , , 150, 300, , true);
 			rooms._floor3 = false
 		}
         if (!audio_is_playing(snd_airvents)) {
