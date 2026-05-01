@@ -47,7 +47,9 @@ if (p != noone) {
     }
 
     // Player Glow
-    draw_circle_color(px, py, 60, c_white, c_white, false);
+    draw_set_alpha(0.45);
+	draw_circle_color(px, py, 60, make_color_rgb(160, 160, 160), make_color_rgb(40, 40, 40), false);
+	draw_set_alpha(1);
 }
 
 

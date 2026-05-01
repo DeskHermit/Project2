@@ -66,11 +66,21 @@ switch (room) {
     break;
 
     case rm_notes:
-        scr_note(global.heading, global.content);
+        if (global.heading == "Instructions") {
+			scr_note(global.heading, global.content, 24, 22, 520);
+		}
+		else {
+			scr_note(global.heading, global.content);
+		}
     break;
 
     case rm_notes_video:
-        scr_note(global.heading, global.content);
+        if (global.heading == "Instructions") {
+			scr_note(global.heading, global.content, 24, 22, 520);
+		}
+		else {
+			scr_note(global.heading, global.content);
+		}
     break;
 	
     case rm_floor1:
@@ -109,6 +119,10 @@ switch (room) {
 	
 	case rm_notes_leaderboard:
 	    scr_load_leaderboard();
+	break;
+	
+	case rm_end_negative_screen:
+		scr_textbox("YOU LOSE", c_red, 1000, 1920 / 2, 1080 / 2 - 80, 240, false, false);
 	break;
 }
 
