@@ -32,7 +32,7 @@ _tutorial = true;
 
 window_set_fullscreen(true);
 
-no_rooms = [
+global.no_rooms = [
 	rm_end_negative_screen,
 	rm_end_positive_screen,
 	rm_door_break,
@@ -42,10 +42,11 @@ no_rooms = [
 	rm_steps,
 	rm_lift_scene,
 	rm_notes_video,
-	rm_notes_leaderboard
+	rm_notes_leaderboard,
+	rm_first_playable_end
 ];
 
-table_rooms = [
+global.table_rooms = [
 	rm_outside_table,
 	rm_floor_table,
 	rm_floor_cuboard

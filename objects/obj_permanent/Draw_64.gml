@@ -2,7 +2,7 @@ display_set_gui_size(1920, 1080);
 
 var _wiz = instance_find(obj_wizard, 0);
 
-if (!array_contains(no_rooms, room) && !array_contains(table_rooms, room)) {
+if (!array_contains(global.no_rooms, room) && !array_contains(global.table_rooms, room)) {
     var _tx = 1800;
     var _ty = 40;
     
@@ -13,7 +13,7 @@ if (!array_contains(no_rooms, room) && !array_contains(table_rooms, room)) {
     }
 }
 
-if (!array_contains(no_rooms, room)) {
+if (!array_contains(global.no_rooms, room)) {
     #region Inventory
 
     var inv_scale = 0.7; 
@@ -50,7 +50,7 @@ if (!array_contains(no_rooms, room)) {
             
             if (spr != -1) {
                 if (is_hovered && mouse_check_button_pressed(mb_left)) {
-                    if (array_contains(table_rooms, room)) {
+                    if (array_contains(global.table_rooms, room)) {
                         var _list = global.storage[$ global.store_id];
                         
                         if (!is_undefined(_list)) {

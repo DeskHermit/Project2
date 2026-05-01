@@ -78,7 +78,7 @@ switch (room) {
 	break;
 }
 
-if (!array_contains(no_rooms, room) && !array_contains(table_rooms, room) && c_room == room) {
+if (!array_contains(global.no_rooms, room) && !array_contains(global.table_rooms, room) && c_room == room) {
 	var _wiz = instance_find(obj_wizard, 0);
 
 	if (instance_exists(_wiz)) {
@@ -116,3 +116,11 @@ global.grid = mp_grid_create(0, 0, _w, _h, _cell_size, _cell_size);
 
 mp_grid_add_instances(global.grid, obj_collision, false);
 mp_grid_add_instances(global.grid, obj_door, false);
+
+if (!scr_is_gameplay_room()) {
+	if (audio_is_playing(snd_bat_chirp)) {
+		audio_stop_sound(snd_bat_chirp);
+	}
+
+	global.chasing = false;
+}

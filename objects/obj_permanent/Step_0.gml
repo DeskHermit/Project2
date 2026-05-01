@@ -6,13 +6,15 @@ if (instance_exists(obj_pause_screen)) {
 
 var _score_room = true;
 
-if (array_contains(no_rooms, room)) {
+if (array_contains(global.no_rooms, room)) {
 	_score_room = false;
 }
 
-if (array_contains(table_rooms, room)) {
+if (array_contains(global.table_rooms, room)) {
 	_score_room = false;
 }
+
+global.chasing = false;
 
 if (global.score_started && !global.score_stopped && !_paused && _score_room) {
 	global.score -= global.score_loss_per_second / room_speed;

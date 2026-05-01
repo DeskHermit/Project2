@@ -79,7 +79,6 @@ if (_wiz != noone) {
         }
 
         if (_dist >= lose_range) {
-            global.chasing = false;
             is_chasing = false;
             is_returning = true;
         }
@@ -99,32 +98,43 @@ if (_wiz != noone) {
     }
 }
 
-squeak_timer--;
+if (scr_can_bat_audio()) {
+	squeak_timer--;
 
-if (squeak_timer <= 0) {
-    if (_wiz != noone) {
-        var _snd = audio_play_sound_at(
-            snd_bat_chirp,
-            x,
-            y,
-            0,
-            100,
-            300,
-            1,
-            false,
-            10
-        );
+	if (squeak_timer <= 0) {
+		var _falloff_ref = 96;
+		var _falloff_max = is_chasing ? 900 : 700;
+		var _priority = is_chasing ? 20 : 10;
 
-        if (audio_is_playing(_snd)) {
-            audio_sound_pitch(_snd, random_range(0.7, 0.9));
-        }
+		var _snd = audio_play_sound_at(
+			snd_bat_chirp,
+			x,
+			y,
+			0,
+			_falloff_ref,
+			_falloff_max,
+			1,
+			false,
+			_priority
+		);
 
-        var _min = is_chasing ? squeak_min * 0.5 : squeak_min;
-        var _max = is_chasing ? squeak_max * 0.5 : squeak_max;
+		if (audio_is_playing(_snd)) {
+			audio_sound_pitch(_snd, random_range(0.75, 1.15));
 
-        squeak_timer = irandom_range(_min, _max);
-    }
-    else {
-        squeak_timer = irandom_range(squeak_min, squeak_max);
-    }
+			if (is_chasing) {
+				audio_sound_gain(_snd, 1.0, 0);
+			}
+			else {
+				audio_sound_gain(_snd, 0.75, 0);
+			}
+		}
+
+		var _min = is_chasing ? squeak_min * 0.45 : squeak_min;
+		var _max = is_chasing ? squeak_max * 0.45 : squeak_max;
+
+		squeak_timer = irandom_range(_min, _max);
+	}
+}
+else {
+	squeak_timer = max(squeak_timer, room_speed);
 }
