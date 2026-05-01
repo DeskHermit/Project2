@@ -1,13 +1,14 @@
 text = ""
 char_progress = []
 scramble = true
+space = false
 
 translation_speed = 0.12 
 
-padding = 20
+padding = 30
 max_w = 600
 line_sep = 32
-width_buffer = 40
+width_buffer = 60
 
 font_readable = fnt_textbox
 font_unreadable = fnt_idk

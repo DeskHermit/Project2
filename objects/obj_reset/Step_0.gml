@@ -12,7 +12,7 @@ if (position_meeting(_mx, _my, id)) {
         if (!instance_exists(obj_transition)) {
             scr_init_run();
             global.reset_to_start = true;
-            scr_fade(rm_tutorial);
+            scr_fade(rm_title_screen);
         }
     }
 } else {
@@ -23,6 +23,6 @@ if (keyboard_check_pressed(ord("R"))) {
     if (!instance_exists(obj_transition)) {
         scr_init_run();
         global.reset_to_start = true;
-        scr_fade(rm_tutorial);
+        scr_fade(rm_title_screen);
     }
 }

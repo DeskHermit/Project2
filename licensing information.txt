@@ -1,0 +1,6 @@
+Licensing information about currently used in-game assets:
+
+All Sprites used in this game is made by Abishek Tony
+
+- Temporary Death Sound - hurt2.wav by thecheeseman -- https://freesound.org/s/44429/ -- License: Attribution 4.0
+- Bat Chirping Sound - nature-bat-chirping-type-1-354288 by Pixabay -- https://pixabay.com/sound-effects/nature-bat-chirping-type-1-354288/ -- License: Pixabay Content License

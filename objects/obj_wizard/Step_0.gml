@@ -3,6 +3,19 @@ moveLeft = keyboard_check(vk_left) or keyboard_check(ord("A"))
 moveUp = keyboard_check(vk_up) or keyboard_check(ord("W"))
 moveDown = keyboard_check(vk_down) or keyboard_check(ord("S"))
 
+if (moveRight > 0 || moveLeft > 0 || moveUp > 0 || moveDown > 0) {
+    if (!audio_is_playing(snd_walking)) {
+        audio_play_sound(snd_walking, 30, true)
+        audio_sound_gain(snd_walking, 0, 0)
+    }
+    audio_sound_gain(snd_walking, 1, 150)
+} else {
+    audio_sound_gain(snd_walking, 0, 150)
+    if (audio_sound_get_gain(snd_walking) <= 0) {
+        audio_stop_sound(snd_walking)
+    }
+}
+
 audio_listener_position(x, y, 0);
 
 if (global.inventory.torch){
@@ -11,6 +24,18 @@ if (global.inventory.torch){
 	sprite_index = _characters[2]
 } else {
 	sprite_index = _characters[0]
+}
+
+if (h_time>0){
+	h_time-=1
+}
+
+if (food_time > 0) {
+	food_time -= 1;
+}
+
+if (overheal_time > 0) {
+	overheal_time -= 1;
 }
 
 
@@ -25,7 +50,8 @@ if (xspd != 0 or yspd != 0) {
     image_index = 1
 }
 
-move_and_collide(xspd,yspd,[obj_collision]);
+move_and_collide(xspd,yspd,[obj_collision, obj_door]);
+
 
 // Toggle flashlight
 if (keyboard_check_pressed(ord("F")) && global.inventory.torch) {
@@ -34,48 +60,29 @@ if (keyboard_check_pressed(ord("F")) && global.inventory.torch) {
 
 // Flashlight toggle cheat (Shift + F)
 if (keyboard_check_pressed(ord("F")) 
-    && keyboard_check(vk_shift)) 
+    && keyboard_check(vk_alt)) 
 {
     flashlight_on = !flashlight_on;
 } 
 
 // Battery drain
 if (flashlight_on) {
-    battery -= 0.05;
-	if (battery<10) {
-		scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false)
+	if (!global.inventory.battery_cheat) {
+		battery -= 0.05;
+
+		if (battery <= 10 && battery > 9.95) {
+			scr_textbox("Flashlight Battery Low !!", #FF1921,,,50,300,false);
+		}
 	}
-    if (battery <= 0) {
-        battery = 0;
-        flashlight_on = false;
-    }
+	else {
+		battery = 100;
+	}
+
+	if (battery <= 0) {
+		battery = 0;
+		flashlight_on = false;
+	}
 }
 
-x = clamp(x, 0, room_width);
-y = clamp(y, 0, room_height);
+global.inventory.battery = battery;
 
-
-if (mouse_check_button_pressed(mb_left)) {
-    
-    var mx = device_mouse_x(0);
-    var my = device_mouse_y(0);
-    
-    var clickedItem = instance_position(mx, my, obj_item_parent);
-    
-    if (clickedItem != noone) {
-        
-        for (var i = 0; i < array_length(global.inventory.items); i++) {
-            
-            if (global.inventory.items[i] == noone) {
-                
-               global.inventory.items[i] = clickedItem.object_index;
-			   if (clickedItem.object_index == obj_torch) {
-                     global.inventory.torch = true;
-               }
-			   
-               instance_destroy(clickedItem);
-                break;
-            }
-        }
-    }
-}

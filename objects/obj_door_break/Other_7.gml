@@ -1,1 +1,2 @@
-room_goto(rm_first_playable_end)
+room_goto(rm_floor1)
+audio_stop_sound(snd_glass_break)

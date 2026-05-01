@@ -39,11 +39,18 @@ switch (state) {
     break
 
     case "waiting":
-        if (vanish_timer > 0) {
-            vanish_timer -= 1
-        } else {
-            state = "closing"
-        }
+		if (!space){
+	        if (vanish_timer > 0) {
+	            vanish_timer -= 1
+	        } else {
+	            state = "closing"
+	        }
+		} else {
+			if (keyboard_check_pressed(vk_space)){
+				state = "closing"
+			}
+		}
+			
     break
 
     case "closing":

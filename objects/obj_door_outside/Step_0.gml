@@ -13,12 +13,18 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
     }
 
     if (_has_hammer) {
-        global.inventory.items[_hammer_slot] = noone;
-        is_unlocked = true;
-        global.last_room = room;
-        room_goto(rm_door_break);
+		if (global.inventory.torch) {
+	        global.inventory.items[_hammer_slot] = noone;
+	        is_unlocked = true;
+	        global.last_room = room;
+			room_persistent = false
+	        room_goto(rm_door_break);
+		}
+		else{ 
+			scr_textbox("You need the flashlight before continuing!",c_red,,,50)
+		}
     } else {
-        show_debug_message("You need the hammer.");
+		scr_textbox("You need the hammer!",c_red,,,50)
     }
 }
 

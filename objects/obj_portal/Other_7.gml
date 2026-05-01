@@ -1,0 +1,1 @@
+room_goto(rm_end_positive_screen)
