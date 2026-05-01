@@ -66,11 +66,21 @@ switch (room) {
     break;
 
     case rm_notes:
-        scr_note(global.heading, global.content);
+        if (global.heading == "Instructions") {
+			scr_note(global.heading, global.content, 24, 22, 520);
+		}
+		else {
+			scr_note(global.heading, global.content);
+		}
     break;
 
     case rm_notes_video:
-        scr_note(global.heading, global.content);
+        if (global.heading == "Instructions") {
+			scr_note(global.heading, global.content, 24, 22, 520);
+		}
+		else {
+			scr_note(global.heading, global.content);
+		}
     break;
 	
     case rm_floor1:
