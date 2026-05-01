@@ -156,13 +156,13 @@ if (scr_can_enemy_audio()) {
 		);
 
 		if (audio_is_playing(_snd)) {
-			audio_sound_gain(_snd, is_chasing ? 0.45 : 0.25, 0);
+			audio_sound_gain(_snd, is_chasing ? 0.25 : 0.12, 0);
 			audio_sound_pitch(_snd, random_range(0.65, 0.9));
 		}
 
 		idle_sound_timer = is_chasing
-			? irandom_range(room_speed * 2, room_speed * 4)
-			: irandom_range(room_speed * 5, room_speed * 10);
+			? irandom_range(room_speed * 5, room_speed * 8)
+			: irandom_range(room_speed * 8, room_speed * 14);
 	}
 }
 else {
