@@ -110,7 +110,7 @@ Game Walkthrough:
 
 
 Cheat Codes:
-- Ctrl + Shift + F: Use the flashlight without having it
+- ALt + F: Use the flashlight without having it
 - Alt + H: Toggle health cheat
 - Alt + B: Toggle battery cheat
 - Alt+ T: Jump to the tutorial/outside area
