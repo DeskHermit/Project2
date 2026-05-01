@@ -1,6 +1,6 @@
 var _wiz = instance_nearest(x, y, obj_wizard);
-var _personal_space = 70; 
-var _damage_range = 85;   
+var _personal_space = 70;
+var _damage_range = 85;
 
 if (_wiz != noone) {
     var _dist = point_distance(x, y, _wiz.x, _wiz.y);
@@ -8,77 +8,79 @@ if (_wiz != noone) {
     if (!is_chasing && _dist <= detect_range) {
         is_chasing = true;
         is_returning = false;
-        
+
         spawn_x = x;
         spawn_y = y;
-        saved_path_pos = path_position; 
-        
+        saved_path_pos = path_position;
+
         path_end();
     }
 
     if (is_chasing) {
         global.chasing = true;
+
         var _dir_to_wiz = point_direction(x, y, _wiz.x, _wiz.y);
 
         if (_dist < _personal_space) {
             path_end();
-            
+
             var _move_dir = point_direction(_wiz.x, _wiz.y, x, y);
             var _xspd = lengthdir_x(chase_speed, _move_dir);
             var _yspd = lengthdir_y(chase_speed, _move_dir);
-            
-            move_and_collide(_xspd, _yspd, [obj_collision]);
+
+            move_and_collide(_xspd, _yspd, [obj_collision, obj_door]);
+
             image_angle = _dir_to_wiz - 90;
-        } 
+        }
         else {
             path_update_timer--;
+
             if (path_update_timer <= 0) {
                 path_update_timer = 15;
-                
+
                 if (mp_grid_path(global.grid, my_path, x, y, _wiz.x, _wiz.y, true)) {
                     path_start(my_path, chase_speed, path_action_stop, true);
                 }
             }
+
             image_angle = _dir_to_wiz - 90;
         }
 
         if (_dist <= _damage_range && _wiz.h_time <= 0) {
-			if (_dist <= _damage_range && _wiz.h_time <= 0) {
-				if (scr_can_enemy_audio()) {
-					var _hit_snd = audio_play_sound_at(
-						snd_Hitting,
-						x,
-						y,
-						0,
-						120,
-						700,
-						1,
-						false,
-						25
-					);
+            var _damage_amount = 50;
 
-					if (audio_is_playing(_hit_snd)) {
-						audio_sound_gain(_hit_snd, 1, 0);
-					}
-				}
+            if (scr_can_enemy_audio()) {
+                var _hit_snd = audio_play_sound_at(
+                    snd_Hitting,
+                    x,
+                    y,
+                    0,
+                    120,
+                    700,
+                    1,
+                    false,
+                    25
+                );
 
-				audio_play_sound(snd_wizard_death_temp, 10, false);
+                if (audio_is_playing(_hit_snd)) {
+                    audio_sound_gain(_hit_snd, 1, 0);
+                }
+            }
 
-				if (!global.inventory.hp_cheat) {
-					global.inventory.hp -= 50;
-				}
-
-				_wiz.h_time = 560;
-
-				if (global.inventory.hp <= 0) {
-					room_persistent = false;
-					room_goto(rm_end_negative_screen);
-				}
-			}
             audio_play_sound(snd_wizard_death_temp, 10, false);
-            if (!global.inventory.hp_cheat) global.inventory.hp -= 50;
-            _wiz.h_time = 560; 
-            if (global.inventory.hp <= 0){
+
+            if (!global.inventory.hp_cheat) {
+                global.inventory.hp -= _damage_amount;
+                global.inventory.hp = max(global.inventory.hp, 0);
+            }
+
+            _wiz.h_time = 560;
+
+            if (global.debug) {
+                show_debug_message("Florida Man hit player for " + string(_damage_amount) + ". HP now: " + string(global.inventory.hp));
+            }
+
+            if (global.inventory.hp <= 0) {
                 room_persistent = false;
                 room_goto(rm_end_negative_screen);
             }
@@ -89,65 +91,71 @@ if (_wiz != noone) {
             is_returning = true;
             path_end();
         }
-    } 
+    }
     else if (is_returning) {
         path_update_timer--;
+
         if (path_update_timer <= 0) {
             path_update_timer = 20;
+
             if (mp_grid_path(global.grid, my_path, x, y, spawn_x, spawn_y, true)) {
                 path_start(my_path, chase_speed, path_action_stop, true);
             }
         }
-        
-        if (path_speed > 0) image_angle = direction - 90;
-        
+
+        if (path_speed > 0) {
+            image_angle = direction - 90;
+        }
+
         if (point_distance(x, y, spawn_x, spawn_y) < 10) {
             is_returning = false;
             path_end();
-            
+
             path_start(patrol_path, patrol_speed, path_action_restart, true);
-            path_position = saved_path_pos; 
+            path_position = saved_path_pos;
         }
     }
     else {
-        if (path_speed > 0) image_angle = direction - 90;
+        if (path_speed > 0) {
+            image_angle = direction - 90;
+        }
     }
 }
 
 if (scr_can_enemy_audio() && (x != xprevious || y != yprevious)) {
-	step_timer--;
+    step_timer--;
 
-	if (step_timer <= 0) {
-		var _falloff_ref = 220;
-		var _falloff_max = is_chasing ? 1250 : 950;
-		var _priority = is_chasing ? 15 : 8;
+    if (step_timer <= 0) {
+        var _falloff_ref = 220;
+        var _falloff_max = is_chasing ? 1250 : 950;
+        var _priority = is_chasing ? 15 : 8;
 
-		var _snd = audio_play_sound_at(
-			snd_flman_walk,
-			x,
-			y,
-			0,
-			_falloff_ref,
-			_falloff_max,
-			1,
-			false,
-			_priority
-		);
+        var _snd = audio_play_sound_at(
+            snd_flman_walk,
+            x,
+            y,
+            0,
+            _falloff_ref,
+            _falloff_max,
+            1,
+            false,
+            _priority
+        );
 
-		if (audio_is_playing(_snd)) {
-			audio_sound_pitch(_snd, random_range(0.85, 1.15));
+        if (audio_is_playing(_snd)) {
+            audio_sound_pitch(_snd, random_range(0.85, 1.15));
 
-			if (is_chasing) {
-				audio_sound_gain(_snd, 1.0, 0);
-			}
-			else {
-				audio_sound_gain(_snd, 0.7, 0);
-			}
-		}
+            if (is_chasing) {
+                audio_sound_gain(_snd, 1.0, 0);
+            }
+            else {
+                audio_sound_gain(_snd, 0.7, 0);
+            }
+        }
 
-		step_timer = is_chasing ? 16 : 32;
-	}
+        step_timer = is_chasing ? 16 : 32;
+    }
 }
 else {
-	step_timer = 0;
+    step_timer = min(step_timer, 6);
 }

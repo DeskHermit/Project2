@@ -21,7 +21,7 @@ if (_contact && keyboard_check_pressed(ord("E"))) {
 	        room_goto(rm_door_break);
 		}
 		else{ 
-			scr_textbox("You need the torch before continuing!",c_red,,,50)
+			scr_textbox("You need the flashlight before continuing!",c_red,,,50)
 		}
     } else {
 		scr_textbox("You need the hammer!",c_red,,,50)

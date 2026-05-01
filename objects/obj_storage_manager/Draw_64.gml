@@ -34,11 +34,52 @@ for (var i = 0; i < 5; i++) {
                 if (!_already_exists) {
                     array_push(_list, _item);
                     
-	                var _rx = x + irandom_range(40, 400);
-	                var _ry = y + irandom_range(20, 150);
-					if (!iftable){
-						_rx = x + irandom_range(20, 105)
-						_ry = y + irandom_range(20, 527)
+	                var _spawn_points_table = [
+						[80, 50],
+						[180, 50],
+						[280, 50],
+						[380, 50],
+						[120, 120],
+						[240, 120],
+						[360, 120]
+					];
+
+					var _spawn_points_cupboard = [
+						[40, 60],
+						[40, 150],
+						[40, 240],
+						[40, 330],
+						[40, 420]
+					];
+
+					var _spawn_points = _spawn_points_table;
+
+					if (!iftable) {
+						_spawn_points = _spawn_points_cupboard;
+					}
+
+					var _rx = x + 80;
+					var _ry = y + 50;
+					var _found_spot = false;
+
+					for (var p = 0; p < array_length(_spawn_points); p++) {
+						var _pos = _spawn_points[p];
+
+						var _test_x = x + _pos[0];
+						var _test_y = y + _pos[1];
+
+						if (!position_meeting(_test_x, _test_y, obj_item_parent)) {
+							_rx = _test_x;
+							_ry = _test_y;
+							_found_spot = true;
+							break;
+						}
+					}
+
+					if (!_found_spot) {
+						if (global.debug) {
+							show_debug_message("No free table spot found.");
+						}
 					}
                     var _inst = instance_create_layer(_rx, _ry, "Instances", _item);
                     
