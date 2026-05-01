@@ -116,6 +116,10 @@ switch (room) {
 	case rm_notes_leaderboard:
 	    scr_load_leaderboard();
 	break;
+	
+	case rm_end_negative_screen:
+		scr_textbox("YOU LOSE", c_red, 1000, 1920 / 2, 1080 / 2 - 80, 240, false, false);
+	break;
 }
 
 if (!array_contains(global.no_rooms, room) && !array_contains(global.table_rooms, room) && c_room == room) {
