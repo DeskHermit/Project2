@@ -52,3 +52,5 @@ table_rooms = [
 ];
 
 global.store_id = "outsidetable2";
+
+display_set_gui_size(1920, 1080);
