@@ -1,4 +1,4 @@
-function scr_can_bat_audio() {
+function scr_can_enemy_audio() {
 	if (!scr_is_gameplay_room()) {
 		return false;
 	}

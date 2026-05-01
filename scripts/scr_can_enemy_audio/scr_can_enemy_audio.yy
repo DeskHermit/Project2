@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_can_bat_audio",
+  "%Name":"scr_can_enemy_audio",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_can_bat_audio",
+  "name":"scr_can_enemy_audio",
   "parent":{
     "name":"scripts",
     "path":"folders/scripts.yy",

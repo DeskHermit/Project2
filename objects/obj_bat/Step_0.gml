@@ -98,7 +98,7 @@ if (_wiz != noone) {
     }
 }
 
-if (scr_can_bat_audio()) {
+if (scr_can_enemy_audio()) {
 	squeak_timer--;
 
 	if (squeak_timer <= 0) {

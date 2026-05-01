@@ -122,5 +122,21 @@ if (!scr_is_gameplay_room()) {
 		audio_stop_sound(snd_bat_chirp);
 	}
 
+	if (audio_is_playing(snd_walking_croc)) {
+		audio_stop_sound(snd_walking_croc);
+	}
+
+	if (audio_is_playing(snd_flman_walk)) {
+		audio_stop_sound(snd_flman_walk);
+	}
+
+	if (audio_is_playing(snd_croc_bite)) {
+		audio_stop_sound(snd_croc_bite);
+	}
+
+	if (audio_is_playing(snd_Hitting)) {
+		audio_stop_sound(snd_Hitting);
+	}
+
 	global.chasing = false;
 }

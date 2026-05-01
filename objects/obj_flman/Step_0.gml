@@ -43,7 +43,38 @@ if (_wiz != noone) {
         }
 
         if (_dist <= _damage_range && _wiz.h_time <= 0) {
-			audio_play_sound(snd_Hitting,20,false)
+			if (_dist <= _damage_range && _wiz.h_time <= 0) {
+				if (scr_can_enemy_audio()) {
+					var _hit_snd = audio_play_sound_at(
+						snd_Hitting,
+						x,
+						y,
+						0,
+						120,
+						700,
+						1,
+						false,
+						25
+					);
+
+					if (audio_is_playing(_hit_snd)) {
+						audio_sound_gain(_hit_snd, 1, 0);
+					}
+				}
+
+				audio_play_sound(snd_wizard_death_temp, 10, false);
+
+				if (!global.inventory.hp_cheat) {
+					global.inventory.hp -= 50;
+				}
+
+				_wiz.h_time = 560;
+
+				if (global.inventory.hp <= 0) {
+					room_persistent = false;
+					room_goto(rm_end_negative_screen);
+				}
+			}
             audio_play_sound(snd_wizard_death_temp, 10, false);
             if (!global.inventory.hp_cheat) global.inventory.hp -= 50;
             _wiz.h_time = 560; 
@@ -83,14 +114,40 @@ if (_wiz != noone) {
     }
 }
 
-if (x != xprevious || y != yprevious) {
-    step_timer--;
-    
-    if (step_timer <= 0) {
-        var _snd = audio_play_sound_at(snd_walking, x, y, 0, 300, 1200, 1, false, 5);
-        audio_sound_pitch(_snd, random_range(0.8, 1.1));
-        step_timer = is_chasing ? 20 : 35; 
-    }
-} else {
-	step_timer = 0; 
+if (scr_can_enemy_audio() && (x != xprevious || y != yprevious)) {
+	step_timer--;
+
+	if (step_timer <= 0) {
+		var _falloff_ref = 220;
+		var _falloff_max = is_chasing ? 1250 : 950;
+		var _priority = is_chasing ? 15 : 8;
+
+		var _snd = audio_play_sound_at(
+			snd_flman_walk,
+			x,
+			y,
+			0,
+			_falloff_ref,
+			_falloff_max,
+			1,
+			false,
+			_priority
+		);
+
+		if (audio_is_playing(_snd)) {
+			audio_sound_pitch(_snd, random_range(0.85, 1.15));
+
+			if (is_chasing) {
+				audio_sound_gain(_snd, 1.0, 0);
+			}
+			else {
+				audio_sound_gain(_snd, 0.7, 0);
+			}
+		}
+
+		step_timer = is_chasing ? 16 : 32;
+	}
+}
+else {
+	step_timer = 0;
 }

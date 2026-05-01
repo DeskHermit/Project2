@@ -22,4 +22,6 @@ my_path = path_add();
 path_update_timer = 0;
 saved_path_pos = 0;
 
-step_timer = 0
+step_timer = 1
+
+idle_sound_timer = irandom_range(room_speed * 4, room_speed * 8);

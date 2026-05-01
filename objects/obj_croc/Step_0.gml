@@ -43,7 +43,23 @@ if (_wiz != noone) {
         }
 
         if (_dist <= _damage_range && _wiz.h_time <= 0) {
-			audio_play_sound(snd_croc_bite,20,false)
+			if (scr_can_enemy_audio()) {
+				var _bite_snd = audio_play_sound_at(
+					snd_croc_bite,
+					x,
+					y,
+					0,
+					120,
+					700,
+					1,
+					false,
+					25
+				);
+
+				if (audio_is_playing(_bite_snd)) {
+					audio_sound_gain(_bite_snd, 1, 0);
+				}
+			}
             audio_play_sound(snd_wizard_death_temp, 10, false);
             if (!global.inventory.hp_cheat) global.inventory.hp -= 30;
             _wiz.h_time = 460; 
@@ -83,14 +99,72 @@ if (_wiz != noone) {
     }
 }
 
-if (x != xprevious || y != yprevious) {
-    step_timer--;
-    
-    if (step_timer <= 0) {
-        var _snd = audio_play_sound_at(snd_walking_croc, x, y, 0, 300, 1200, 1, false, 5);
-        audio_sound_pitch(_snd, random_range(0.8, 1.1));
-        step_timer = is_chasing ? 20 : 35; 
-    }
-} else {
-	step_timer = 0; 
+if (scr_can_enemy_audio() && (x != xprevious || y != yprevious)) {
+	step_timer--;
+
+	if (step_timer <= 0) {
+		if (!audio_is_playing(snd_walking_croc)) {
+			var _falloff_ref = 180;
+			var _falloff_max = is_chasing ? 1000 : 800;
+			var _priority = is_chasing ? 15 : 8;
+
+			var _snd = audio_play_sound_at(
+				snd_walking_croc,
+				x,
+				y,
+				0,
+				_falloff_ref,
+				_falloff_max,
+				1,
+				false,
+				_priority
+			);
+
+			if (audio_is_playing(_snd)) {
+				audio_sound_pitch(_snd, random_range(0.75, 1.05));
+
+				if (is_chasing) {
+					audio_sound_gain(_snd, 0.75, 0);
+				}
+				else {
+					audio_sound_gain(_snd, 0.45, 0);
+				}
+			}
+		}
+
+		step_timer = is_chasing ? 1 : 10;
+	}
+}
+else {
+	step_timer = 4;
+}
+
+if (scr_can_enemy_audio()) {
+	idle_sound_timer--;
+
+	if (idle_sound_timer <= 0) {
+		var _snd = audio_play_sound_at(
+			snd_croc_bite,
+			x,
+			y,
+			0,
+			160,
+			900,
+			1,
+			false,
+			6
+		);
+
+		if (audio_is_playing(_snd)) {
+			audio_sound_gain(_snd, is_chasing ? 0.45 : 0.25, 0);
+			audio_sound_pitch(_snd, random_range(0.65, 0.9));
+		}
+
+		idle_sound_timer = is_chasing
+			? irandom_range(room_speed * 2, room_speed * 4)
+			: irandom_range(room_speed * 5, room_speed * 10);
+	}
+}
+else {
+	idle_sound_timer = room_speed * 3;
 }
