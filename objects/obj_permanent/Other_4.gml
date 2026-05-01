@@ -36,24 +36,29 @@ if (room == rm_floor2 && global.from_lift_scene) {
 switch (room) {
     case rm_title_screen:
         scr_textbox("Welcome player", c_orange, 300, , 50, 300);
-
+		rooms = {
+		_tutorial : true,
+		_floor1 : true,
+		_floor2 : true,
+		_floor3 : true
+		}
         if (global.first_time) {
             scr_textbox("You can also press the first letter of buttons to press them", c_lime, , , 150, 300);
         }
     break;
 
     case rm_tutorial:
-        if (global.first_time && _tutorial) {	
-            scr_textbox("It is dark! Find the table and acquire the torch!", c_lime, , , 100, 300, , true);
+        if (global.first_time && rooms._tutorial) {	
+            scr_textbox("It is dark! Find the table and acquire the torch!", c_lime, , , 50, 300, , true);
             scr_textbox("Use WASD to move around. Press space to close.", c_yellow, , , , 300, , true);
-            _tutorial = !_tutorial;
+            rooms._tutorial = false;
         }
 
         if (!audio_is_playing(snd_night)) {
             audio_play_sound(snd_night, 30, true);
         }
     break;
-
+	
     case rm_first_playable_end:
         if (global.first_time) {
             scr_textbox("TO BE CONTINUED", c_white, , , 300, 300);
@@ -69,10 +74,35 @@ switch (room) {
     break;
 	
     case rm_floor1:
+		if (global.first_time && rooms._floor1) {	
+            scr_textbox("The steps are blocked! Try to fix the lift to go to next floor!", c_lime, , , 50, 300, , true);
+			rooms._floor1 = false
+		}
         if (!audio_is_playing(snd_airvents)) {
             audio_play_sound(snd_airvents, 30, true);
         }
     break;
+	
+	case rm_floor2:
+		if (global.first_time && rooms._floor2) {	
+            scr_textbox("The id card is here somewhere. Find it and go tothe next floor", c_lime, , , 50, 300, , true);
+			rooms._floor2 = false
+		}
+        if (!audio_is_playing(snd_airvents)) {
+            audio_play_sound(snd_airvents, 30, true);
+        }
+    break;
+	
+	case rm_floor3:
+		if (global.first_time && rooms._floor3) {	
+            scr_textbox("The staff is somewhere here. But do not get caught by the wizard!", c_lime, , , 50, 300, , true);
+			rooms._floor3 = false
+		}
+        if (!audio_is_playing(snd_airvents)) {
+            audio_play_sound(snd_airvents, 30, true);
+        }
+    break;
+	
 	case rm_notes_leaderboard:
 	    scr_load_leaderboard();
 	break;

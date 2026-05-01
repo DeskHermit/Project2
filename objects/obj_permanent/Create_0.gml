@@ -28,7 +28,13 @@ music_vol = 1;
 maxInvSlots = 5;
 
 global.first_time = true;
-_tutorial = true;
+
+rooms = {
+_tutorial : true,
+_floor1 : true,
+_floor2 : true,
+_floor3 : true
+}
 
 window_set_fullscreen(true);
 
