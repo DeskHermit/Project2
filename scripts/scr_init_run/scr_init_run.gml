@@ -3,9 +3,10 @@ function scr_init_run() {
 	    items: array_create(5, noone),
 	    torch: false,
 	    staff: false,
-		hp: 100,
-		hp_cheat: false,
-		battery_cheat: false,
+	    hp: 100,
+	    battery: 100,
+	    hp_cheat: false,
+	    battery_cheat: false,
 	};
 	
 	global.door_cheat = false;

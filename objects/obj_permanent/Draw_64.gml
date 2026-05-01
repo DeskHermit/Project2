@@ -87,7 +87,8 @@ if (!array_contains(global.no_rooms, room)) {
 						        global.score = min(global.score, global.score_max);
 
 						        _wiz.battery = 100;
-						        _wiz.flashlight_on = true;
+								global.inventory.battery = 100;
+								_wiz.flashlight_on = true;
 
 						        audio_play_sound(snd_pickup_item, 10, false);
 						        global.inventory.items[inv] = noone;

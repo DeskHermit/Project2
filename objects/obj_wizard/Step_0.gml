@@ -84,3 +84,5 @@ if (flashlight_on) {
 	}
 }
 
+global.inventory.battery = battery;
+
