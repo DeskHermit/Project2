@@ -15,8 +15,19 @@ if (position_meeting(_mx, _my, id)) {
     if (mouse_check_button_released(mb_left)) {
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
-			global.heading = "Instructions"
-			global.content = ["Press wsad or arrow keys to control the character","USe mouse to click item to pickup use and drop items","Press E when E shows up when you are near an interactable objects such as table","Press F to toggle flashlight after obtaining flashlight. Use batteries to refill","Keycards and keys can be used to unlock doors","Chips and burger can be used to restore health","Bats can go through walls"]
+			global.heading = "Instructions";
+			global.content = [
+				"Move with WASD or the arrow keys.",
+				"Click items to pick them up.",
+				"Use the inventory to use or drop items.",
+				"Press E near tables, doors, and other interactable objects.",
+				"Press F to toggle the flashlight after finding it.",
+				"Use batteries to refill the flashlight.",
+				"Keys and keycards unlock doors.",
+				"Chips and burgers restore health.",
+				"Bats can fly through walls.",
+				"Press Space to close textboxes."
+			];
 			room_goto(rm_notes_video)
 		}
     }

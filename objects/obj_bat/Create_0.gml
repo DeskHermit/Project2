@@ -16,6 +16,8 @@ squeak_max = room_speed * 5;
 squeak_timer = irandom_range(squeak_min, squeak_max);
 
 visible_in_light = false;
+repelled_by_light = false;
+
 has_been_seen = false;
 seen_timer = 0;
 seen_time_max = room_speed * 2;

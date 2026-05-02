@@ -1,0 +1,36 @@
+var _mx = device_mouse_x_to_gui(0)
+var _my = device_mouse_y_to_gui(0)
+
+if (position_meeting(_mx, _my, id)) {
+	if (mouse_check_button(mb_left)) {
+        image_index = 2
+    } else {
+        image_index = 1
+    }
+	
+	if (mouse_check_button_pressed(mb_left)) {
+		audio_play_sound(b_click,10,false)
+	}
+    
+    if (mouse_check_button_released(mb_left)) {
+		if (!instance_exists(obj_transition)) {
+			audio_play_sound(b_clicked,10,false)
+			global.heading = "Instructions"
+			global.content = ["Press wsad or arrow keys to control the character","Use mouse to click item to pickup use and drop items","Press E when E shows up when you are near an interactable objects such as table","Press F to toggle flashlight after obtaining flashlight. Use batteries to refill","Keycards and keys can be used to unlock doors","Chips and burger can be used to restore health","Bats can go through walls"]
+			if (instance_exists(obj_pause_panel))
+				instance_destroy()
+			room_goto(rm_notes_video)
+		}
+    }
+} else {
+    image_index = 0
+}
+
+if (b_key!=noone){
+	if (keyboard_check_pressed(ord(b_key))){
+		if (!instance_exists(obj_transition)) {
+			audio_play_sound(b_clicked,10,false)
+	        scr_fade(b_room)
+		}
+	}
+}
