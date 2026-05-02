@@ -2,5 +2,31 @@ Licensing information about currently used in-game assets:
 
 All Sprites used in this game is made by Abishek Tony
 
-- Temporary Death Sound - hurt2.wav by thecheeseman -- https://freesound.org/s/44429/ -- License: Attribution 4.0
+- Background Music - 夜に聞こえる / I Hear It at Night by Pixabay -- https://pixabay.com/music/video-games-%e5%a4%9c%e3%81%ab%e8%81%9e%e3%81%93%e3%81%88%e3%82%8b-i-hear-it-at-night-149059/ -- License: Pixabay Content License
+- High Chase Background Music - horror-tuba-ominous-shark-theme-256196 by Pixabay -- https://pixabay.com/sound-effects/horror-tuba-ominous-shark-theme-256196/ -- License: Pixabay Content License
+- Crocodile Bite Sound - horror-monster-bite-44538 by Pixabay -- https://pixabay.com/sound-effects/horror-monster-bite-44538/ -- License: Pixabay Content License
+- Glass Breaking Sound - household-glass-breaking-511313 by Pixabay -- https://pixabay.com/sound-effects/household-glass-breaking-511313/ -- License: Pixabay Content License
+- Walking Sound - film-special-effects-walking-96582 by Pixabay -- https://pixabay.com/sound-effects/film-special-effects-walking-96582/ -- License: Pixabay Content License
+- Crocodile Walking Sound - film-special-effects-walking-sound-effect-272246 by Pixabay -- https://pixabay.com/sound-effects/film-special-effects-walking-sound-effect-272246/ -- License: Pixabay Content License
+- Hitting Effect - film-special-effects-hitting-stalactites-with-axe-212652 by Pixabay -- https://pixabay.com/sound-effects/film-special-effects-hitting-stalactites-with-axe-212652/ -- License: Pixabay Content License
+- Door Breaking Sound - household-wood-break-40011 by Pixabay -- https://pixabay.com/sound-effects/household-wood-break-40011/ -- License: Pixabay Content License
 - Bat Chirping Sound - nature-bat-chirping-type-1-354288 by Pixabay -- https://pixabay.com/sound-effects/nature-bat-chirping-type-1-354288/ -- License: Pixabay Content License
+- Flashlight Click Sound - film-special-effects-computer-mouse-click-352734 by Pixabay -- https://pixabay.com/sound-effects/film-special-effects-computer-mouse-click-352734/ -- License: Pixabay Content License
+- Pickup Paper Sound - film-special-effects-pickup-paper-96773 by Pixabay -- https://pixabay.com/sound-effects/film-special-effects-pickup-paper-96773/ -- License: Pixabay Content License
+- Temporary Death Sound - hurt2.wav by thecheeseman -- https://freesound.org/people/thecheeseman/sounds/44429/ -- License: Attribution 4.0
+- Thunder Sound - nature-dry-thunder-364468 by Dragon Studios -- https://pixabay.com/sound-effects/nature-dry-thunder-364468/ -- License: Pixabay Content License
+- Rain Sound - nature-relaxing-rain-444802 by Dragon Studios -- https://pixabay.com/sound-effects/nature-relaxing-rain-444802/ -- License: Pixabay Content License
+- Morning Sounds - nature-birds-in-the-morning-24147 by freesound_community -- https://pixabay.com/sound-effects/nature-birds-in-the-morning-24147/ -- License: Pixabay Content License
+- Pick-up Sound - film-special-effects-pick-up-sfx-38516 by freesound_community -- https://pixabay.com/sound-effects/film-special-effects-pick-up-sfx-38516/ -- License: Pixabay Content License
+- Paper Sound - film-special-effects-paper-rustle-81855 by freesound_community -- https://pixabay.com/sound-effects/film-special-effects-paper-rustle-81855/ -- License: Pixabay Content License
+- Nom Sound - people-nom-101089 by freesound_community -- https://pixabay.com/sound-effects/people-nom-101089/ -- License: Pixabay Content License
+- Door Open Sound - open-door-stock-sfx-454246 by Dragon Studios -- https://pixabay.com/sound-effects/open-door-stock-sfx-454246/ -- License: Pixabay Content License
+- Lift Door Sound - household-goods-lift-door-99391 by freesound_community -- https://pixabay.com/sound-effects/household-goods-lift-door-99391/ -- License: Pixabay Content License
+- Elevator Music - lounge-jazz-elevator-music-324902 by HitLab -- https://pixabay.com/music/traditional-jazz-lounge-jazz-elevator-music-324902/ -- License: Pixabay Content License
+- Elevator Ding Sound - film-special-effects-elevator-ding-at-arenco-tower-dubai-38520 by freesound_community -- https://pixabay.com/sound-effects/film-special-effects-elevator-ding-at-arenco-tower-dubai-38520/ -- License: Pixabay Content License
+- Air Vent Sound - film-special-effects-air-vent-2-64234 by freesound_community -- https://pixabay.com/sound-effects/film-special-effects-air-vent-2-64234/ -- License: Pixabay Content License
+- Night Ambience Sound - nature-night-ambience-29548 by freesound_community -- https://pixabay.com/sound-effects/nature-night-ambience-29548/ -- License: Pixabay Content License
+- Portal Sound - film-special-effects-spaceship-cruising-ufo-7176 by freesound_community -- https://pixabay.com/sound-effects/film-special-effects-spaceship-cruising-ufo-7176/ -- License: Pixabay Content License
+- Table Sound - film-special-effects-box-open-90674 by freesound_community -- https://pixabay.com/sound-effects/film-special-effects-box-open-90674/ -- License: Pixabay Content License
+- Horror Ambience Music - intense-horror-game-ambience-418842 by Pixabay -- https://pixabay.com/music/ambient-intense-horror-game-ambience-418842/ -- License: Pixabay Content License
+- Paper Rustle / Wind Outside Room Tone - nature-wind-outside-room-tone-457957 by Pixabay -- https://pixabay.com/sound-effects/nature-wind-outside-room-tone-457957/ -- License: Pixabay Content License
