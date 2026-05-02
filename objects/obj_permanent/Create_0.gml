@@ -1,6 +1,7 @@
 global.debug = true;
 
 _af4 = false;
+_tutorial_over = true;
 
 var _wiz = instance_find(obj_wizard, 0);
 
