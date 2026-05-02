@@ -28,7 +28,8 @@ if (position_meeting(_mx, _my, id)) {
 				"Keys and keycards unlock doors.",
 				"Chips and burgers restore health.",
 				"Bats can fly through walls.",
-				"Press Space to close textboxes."
+				"Press Space to close textboxes.",
+				"For the best experience, play with headphones."
 			];
 
 			// Clean up pause before leaving the room.

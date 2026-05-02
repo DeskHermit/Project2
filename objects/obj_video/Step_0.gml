@@ -15,7 +15,7 @@ if (position_meeting(_mx, _my, id)) {
     if (mouse_check_button_released(mb_left)) {
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
-			url_open("https://www.youtube.com/watch?v=hcw_fIApWRY");
+			url_open("https://www.youtube.com/watch?v=0GwX52Fzclg");
 		}
     }
 } else {
@@ -25,7 +25,7 @@ if (b_key!=noone){
 	if (keyboard_check_pressed(ord(b_key))){
 		if (!instance_exists(obj_transition)) {
 			audio_play_sound(b_clicked,10,false)
-			url_open("https://www.youtube.com/watch?v=hcw_fIApWRY");
+			url_open("https://www.youtube.com/watch?v=0GwX52Fzclg");
 		}
 	}
 }
